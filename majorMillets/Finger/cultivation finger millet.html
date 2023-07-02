@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+<style type="text/css">
+
+  /* ============ desktop view ============ */
+  @media all and (min-width: 992px) {
+  
+    .dropdown-menu li{
+      position: relative;
+    }
+    .dropdown-menu .submenu{ 
+      display: none;
+      position: absolute;
+      left:100%; top:-7px;
+    }
+    .dropdown-menu .submenu-left{ 
+      right:100%; left:auto;
+    }
+  
+    .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+    .dropdown-menu > li:hover > .submenu{
+      display: block;
+    }
+  }	
+  /* ============ desktop view .end// ============ */
+  
+  /* ============ small devices ============ */
+  @media (max-width: 991px) {
+  
+  .dropdown-menu .dropdown-menu{
+      margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+  }
+  
+  }	
+  /* ============ small devices .end// ============ */
+  
+  .masthead{
+      background-size: cover;
+      min-height: 100vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    opacity: 80%;
+  }
+  </style>
+  
+  
+  <script type="text/javascript">
+  //	window.addEventListener("resize", function() {
+  //		"use strict"; window.location.reload(); 
+  //	});
+  
+  
+    document.addEventListener("DOMContentLoaded", function(){
+          
+  
+        /////// Prevent closing from click inside dropdown
+      document.querySelectorAll('.dropdown-menu').forEach(function(element){
+        element.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      })
+  
+  
+  
+      // make it as accordion for smaller screens
+      if (window.innerWidth < 992) {
+  
+        // close all inner dropdowns when parent is closed
+        document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+          everydropdown.addEventListener('hidden.bs.dropdown', function () {
+            // after dropdown is hidden, then find all submenus
+              this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                // hide every submenu as well
+                everysubmenu.style.display = 'none';
+              });
+          })
+        });
+        
+        document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+          element.addEventListener('click', function (e) {
+      
+              let nextEl = this.nextElementSibling;
+              if(nextEl && nextEl.classList.contains('submenu')) {	
+                // prevent opening link if link needs to open dropdown
+                e.preventDefault();
+                console.log(nextEl);
+                if(nextEl.style.display == 'block'){
+                  nextEl.style.display = 'none';
+                } else {
+                  nextEl.style.display = 'block';
+                }
+  
+              }
+          });
+        })
+      }
+      // end if innerWidth
+  
+    }); 
+    // DOMContentLoaded  end
+  </script>
+    <title>History </title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+       <a class="navbar-brand" href="/home page .html">Home</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     <div class="collapse navbar-collapse" id="main_nav">
+     
+   
+     <ul class="navbar-nav">
+       
+       <li class="nav-item"><a class="nav-link" href="/About.html"> About </a></li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Millet  </a>
+           <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="/millets/history.html"> History </a></li>
+           
+          
+           <li><a class="dropdown-item" href="/millets/Taxonomy.html"> Taxonomy </a></li>
+           <li><a class="dropdown-item" href="/millets/types of millet.html"> Types </a>
+           <li><a class="dropdown-item" href="/millets/Nutrition.html"> Nutrition </a>
+           <li><a class="dropdown-item" href="/millets/Cultivation.html"> Cultivation </a>
+           <li><a class="dropdown-item" href="/millets/production.html"> Production </a>
+           </ul>
+       </li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Major Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Finger/history finger millet.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/taxonomy finger millet.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/varieties finger millet.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/nutrition finger millet.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/cultivation finger millet.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/production finger millet.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/antioxidant finger millet.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/varieties.html"> varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/production.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/antioxidant.html"> Antioxidant </a>
+   
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/antioxidant.html"> Antioxidant </a>
+           </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Praso/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Minor Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Kudo/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/production.html"> Production </a>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Little/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Little/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/antioxidants.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Teff/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/antioxidant .html"> Antioxidant </a>	
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+   
+       
+       
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Major Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Dietary fibre component..html"> Dietary fiber </a></li>
+            
+            
+                <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Polyphenols.html"> Polyphenols   </a>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/dietary fibre.html"> Dietary fiber  </a>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/polyphenols.html"> Polyphenols </a></li>
+              
+              
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/dietary fibre.html">Dietary fiber </a></li>
+               
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/Polyphenol.html"> Polyphenols </a></li>
+            
+            
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/dietary fibre.html"> Dietary fiber </a> </li>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/Polyphenols.html"> Polyphenols </a></li>
+             
+            
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+  
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Minor Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/Polyphenols.html"> Polyphenol</a></li>
+          
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/Phytochemicals.html"> Polyphenols </a></li>
+          
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/dietary fibre.html"> Dietary fiber </a></li>
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/polyphenols.html"> Polyphenol</a></li>
+                
+                
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/polyphenols.html"> Polyphenols   </a></li>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/dietary fibre.html"> Dietary fiber </a></li>
+              
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/phytochemicals.html"> Polyphenols </a>
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+      <li class="nav-item"><a class="nav-link" href="/team.html"> Team </a></li>
+  
+    </ul>
+   
+     
+   
+     </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+   </nav>
+<body>
+  <body style="background-color:antiquewhite;"></body>
+  <body style="background-color:antiquewhite;"></body>
+    <style>
+        p{font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+        font-style: normal;}
+            </style>
+            <h1>Cultivation </h1>
+
+            <p>Ragi  grown  from May to September and than crop is dried in sun for 2 to 3 days after cutting   . Under irrigation or transplantation  ragi is monocropped in India. It is mostly intercropped with cereals, castor bean, niger, groundnut and pulses.  Fieldbean , pigeon pea , cowpea , and niger are most common crops which are grown with ragi . Finger millet is auxiliary crop  with groundnuts.   
+            </p>
+            <h3>Climatic requirements for ragi cultivation
+            </h3>
+            <hr>
+            
+            <p>For best growth, the finger millet cultivation requires daytime temperatures of 30 °C to 34 °C and night temperatures of 22°C to 25 °C with medium annual rainfall . 
+            </p>
+            <h3>Soil requirements</h3>
+            <hr>
+            <p>For Finger millet cultivation porous/light red loam/sandy loam soils are ideal and it grows best on pH 4.5 to 8.0 .  
+            </p>
+            <h3>Land preparation  
+            </h3>
+            <hr>
+            <p>  The primary field should be ploughed 2 or 3 times  with 80 cm rainfall for  maintaining  the moisture content of  soil.  
+            </p>
+            <h3> Sowing Methods and Propagation </h3>
+            <hr>
+            <p>Seeds are mainly used for propagation in finger millet agriculture. In rainfed cultivation the following sowing methods are employed: 
+                <ul>
+               <div><li>Broadcasting:  Seeds are immediately sown in the field by this method . </li> </div>
+             <div>  <li>  Line Sowing: Seeds are planted in lines in this method . Between lines 22 cm to 30 com line spacing should be done and   8 cm to 10 cm inside lines when using this method. Ragi  seeds should be put in the soil around 3 cm deep.</li> </div>
+             <div> <li>   Drilling in rows: This method is used to sow seeds.  Seed cum fertiliser drill planting is highly advantageous in line sowing .</li>  </div>
+               <div> <li> Seedling Transplantation: The procedure of planting  seedlings in nursery beds and transplanting them to the main field is known as transplanting. In  transplantation process , the beds must be watered. Sprout  should be transferred into the field when they are four weeks old. Sprouts  should be transplanted at 25 × 10 cm in the early Rabi and Kharif seasons, and at 30 cm x 10 cm in the late Kharif season. In 3 cm depth of soil  planting should take place .</li></div>
+               </ul> </p>
+                <h3>Seed Rate  </h3>
+                <hr>
+                <p> Seed rate for ragi  cultivation is around 10 to 15 kg per hectare. 
+                </p>
+                
+                <h3>Intercropping</h3>
+                <hr>
+                <p>Intercropping always yields good  results and there are some  best combinations such as ; Finger Millet + maize, Finger Millet + field bean , Finger Millet + Pigeon pea and  Finger Millet + mustard. 
+                </p>
+                <h3>Irrigation </h3>
+                <hr>
+                <p><div> 
+                    <li>Red soil: </li>
+                
+                    <ul>
+                  <li>1st irrigation  :- It  should be done immediately after Sowing.</li>
+                  <li>   2nd irrigation :- It  should be done on the 3rd day after sowing. </li>
+                  <li> 3rd  irrigation :- It should be done  on the 7th day after   sowing . </li>
+                   <li>4th irrigation :- It   should be done on the 12th day after sowing .</li> 
+                   <li>5th irrigation  :- It should be done on the 17th day. </li> </ul>
+               </div>
+            <div>  
+                <li>  Heavy soil : </li>
+            
+                <ul> 
+                    <li>1st irrigation :- It  should be done immediately after sowing. </li>
+                <li>  2nd irrigation :- It  should be done on the 4th day after sowing . </li> 
+                <li>3rd irrigation :-  sowing after 9th day after sowing . </li>
+                <li>4th irrigation  :- should be done on the 16th day after sowing.</div> </p>
+            <h3>Weed Control </h3>
+            <hr>
+            <p> Hand weed should be applied twice  on the 9th and 19th days after transplanting the seedlings .  Inter cultivation and weeding should be done after 4 weeks of seeding .  Thinning should be done two weeks after seeding because finger millet is a densely seeded crop.  </p>
+            <h3>Pests and Diseases </h3>
+            <hr>
+            <p> Aphids, White stem borer, Root aphid, Finger Millet leaf hopper , Pink stem borer, Leaf folder, Earhead bug, Earhead bug,  Cutworm, Yellow aphid, and Grasshopper are the most common pests encountered in Finger Millet cultivation. Blast and Mosaic are  principal diseases in the Finger Millet crop .  </p>
+            <h3>Harvesting</h3>
+            <hr>
+            <p>Finger millet  harvest   will be ready and mature in 4 to 5 months and  in  2 to 3 months, finger millet begins to flower. Ragi  should be cut above ground level and dried for 2 to 3 days in the sun. Separating the seeds from the plants can be done with bullocks or sticks. 
+            </p>
+            <h3>Yield </h3>
+            <hr>
+            <p>Yield is always affected  by the cultivar used and crop management practises  . If Ragi is grown as a rainfed crop, an average yield of 12 to 15 quintals/ha and  irrigated crops can yield 40 to 45 quintals per hectare.  
+            </p>
+            <p><img src="https://cropgenebank.sgrp.cgiar.org/images/other_crops/fingermillet_main.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Finger millet" data-noaft="1" style="width: 465px; height: 301.924px; margin: 0px;"></p>
+            
+            <h2>Reference </h2>
+            <hr>
+            <p>
+                <ul>
+                    <li>[1] <a href="https://www.agrifarming.in/finger-millet-farming"class="button"> Finger Millet farming information guide    </a></li>
+                    <li>[2]<a href="https://cropgenebank.sgrp.cgiar.org/index.php/regeneration-guidelines-of-crops/finger-millet-mainmenu-403#:~:text=Finger%20millet%20grows%20best%20in,maturation%20are%20best%20for%20regeneration."class="button">  Regeneration guidelines for finger millet  </a></li>
+                    <li>[3]<a href="https://www.apnikheti.com/en/pn/agriculture/crops/fodder/finger-millet"class="button"> Cultivation of finger millet    </a></li>
+                    <li>[4]<a href="https://agritech.tnau.ac.in/agriculture/millets_ragi.html"class="button"> Crop management of finger millet    </a></li>
+                    <li>[5]<a href="https://www.millets.res.in/technologies/brochures/Finger_Millet_Brochure.pdf"class="button">  Finger millet cultivation broucher    </a></li>
+                    <li>[6]<a href="https://krishijagran.com/agripedia/ragi-cultivation-guide-best-varieties-sowing-process-pest-control-harvesting-and-much-more/"class="button">  Ragi Cultivation Guide: Best Varieties, Sowing Process, Pest Control, Harvesting   </a></li>
+                    <li>[7]<a href="https://vikaspedia.in/agriculture/crop-production/package-of-practices/cereals-and-millets/ragi"class="button"> Field preparation and sowing of direct seeded crop   </a></li>
+                    <li>[8]<a href="https://millets.res.in/technologies/1-Recommended_Package_of_Practices-Finger_Millet.pdf"class="button"> Recommended package of practices - IIMR  </a></li>
+                    <li>[9]<a href="http://nfsm.gov.in/ReadyReckoner/NFSM_Package.pdf"class="button">  NFSM package of practices </a></li>
+                    
+                </ul>
+            </p>
+           
+</body>
+</html>

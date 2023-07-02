@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production of Barnyard millet </title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+<style type="text/css">
+
+  /* ============ desktop view ============ */
+  @media all and (min-width: 992px) {
+  
+    .dropdown-menu li{
+      position: relative;
+    }
+    .dropdown-menu .submenu{ 
+      display: none;
+      position: absolute;
+      left:100%; top:-7px;
+    }
+    .dropdown-menu .submenu-left{ 
+      right:100%; left:auto;
+    }
+  
+    .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+    .dropdown-menu > li:hover > .submenu{
+      display: block;
+    }
+  }	
+  /* ============ desktop view .end// ============ */
+  
+  /* ============ small devices ============ */
+  @media (max-width: 991px) {
+  
+  .dropdown-menu .dropdown-menu{
+      margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+  }
+  
+  }	
+  /* ============ small devices .end// ============ */
+  
+  .masthead{
+      background-size: cover;
+      min-height: 100vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    opacity: 80%;
+  }
+  </style>
+  
+  
+  <script type="text/javascript">
+  //	window.addEventListener("resize", function() {
+  //		"use strict"; window.location.reload(); 
+  //	});
+  
+  
+    document.addEventListener("DOMContentLoaded", function(){
+          
+  
+        /////// Prevent closing from click inside dropdown
+      document.querySelectorAll('.dropdown-menu').forEach(function(element){
+        element.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      })
+  
+  
+  
+      // make it as accordion for smaller screens
+      if (window.innerWidth < 992) {
+  
+        // close all inner dropdowns when parent is closed
+        document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+          everydropdown.addEventListener('hidden.bs.dropdown', function () {
+            // after dropdown is hidden, then find all submenus
+              this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                // hide every submenu as well
+                everysubmenu.style.display = 'none';
+              });
+          })
+        });
+        
+        document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+          element.addEventListener('click', function (e) {
+      
+              let nextEl = this.nextElementSibling;
+              if(nextEl && nextEl.classList.contains('submenu')) {	
+                // prevent opening link if link needs to open dropdown
+                e.preventDefault();
+                console.log(nextEl);
+                if(nextEl.style.display == 'block'){
+                  nextEl.style.display = 'none';
+                } else {
+                  nextEl.style.display = 'block';
+                }
+  
+              }
+          });
+        })
+      }
+      // end if innerWidth
+  
+    }); 
+    // DOMContentLoaded  end
+  </script>
+    <title>History </title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+       <a class="navbar-brand" href="/home page .html">Home</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     <div class="collapse navbar-collapse" id="main_nav">
+     
+   
+     <ul class="navbar-nav">
+       
+       <li class="nav-item"><a class="nav-link" href="/About.html"> About </a></li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Millet  </a>
+           <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="/millets/history.html"> History </a></li>
+           
+          
+           <li><a class="dropdown-item" href="/millets/Taxonomy.html"> Taxonomy </a></li>
+           <li><a class="dropdown-item" href="/millets/types of millet.html"> Types </a>
+           <li><a class="dropdown-item" href="/millets/Nutrition.html"> Nutrition </a>
+           <li><a class="dropdown-item" href="/millets/Cultivation.html"> Cultivation </a>
+           <li><a class="dropdown-item" href="/millets/production.html"> Production </a>
+           </ul>
+       </li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Major Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Finger/history finger millet.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/taxonomy finger millet.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/varieties finger millet.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/nutrition finger millet.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/cultivation finger millet.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/production finger millet.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/antioxidant finger millet.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/varieties.html"> varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/production.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/antioxidant.html"> Antioxidant </a>
+   
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/antioxidant.html"> Antioxidant </a>
+           </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Praso/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Minor Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Kudo/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/production.html"> Production </a>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Little/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Little/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/antioxidants.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Teff/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/antioxidant .html"> Antioxidant </a>	
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+      
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Major Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Dietary fibre component..html"> Dietary fiber </a></li>
+            
+            
+                <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Polyphenols.html"> Polyphenols   </a>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/dietary fibre.html"> Dietary fiber  </a>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/polyphenols.html"> Polyphenols </a></li>
+              
+              
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/dietary fibre.html">Dietary fiber </a></li>
+               
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/Polyphenol.html"> Polyphenols </a></li>
+            
+            
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/dietary fibre.html"> Dietary fiber </a> </li>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/Polyphenols.html"> Polyphenols </a></li>
+             
+            
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+  
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Minor Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/Polyphenols.html"> Polyphenol</a></li>
+           
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/Phytochemicals.html"> Polyphenols </a></li>
+           
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/dietary fibre.html"> Dietary fiber </a></li>
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/polyphenols.html"> Polyphenol</a></li>
+                
+                
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/polyphenols.html"> Polyphenols   </a></li>
+           
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/dietary fibre.html"> Dietary fiber </a></li>
+              
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/phytochemicals.html"> Polyphenols </a>
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+      <li class="nav-item"><a class="nav-link" href="/team.html"> Team </a></li>
+  
+    </ul>
+     
+   
+     </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+   </nav>
+<body>
+    <body style="background-color:antiquewhite;"></body> 
+<body>
+    
+    <style>
+        p{font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+        font-style: normal;}
+        </style>
+        <h1>Production </h1>
+        <hr>
+        <p>Barnyard millet, belonging to the Echinochloa species, has a long history of cultivation in warm and temperate regions across the world, particularly in Asia, where it is widely grown in countries such as India, China, Japan, and Korea. It is considered one of the most important minor millets and plays a vital role in providing food security to many impoverished communities globally. In recent years, India has emerged as the largest producer of barnyard millet, with an average productivity of 1034 kg/ha during the last three years, producing 0.147 million tonnes on 0.146 million hectares of land.
+
+            Barnyard millet is primarily cultivated for human consumption, but it is also used as livestock feed. It is a short-duration crop that can grow in adverse environmental conditions with minimal inputs and can withstand various biotic and abiotic stresses, making it an ideal crop for small farmers who lack resources and infrastructure.
+            
+            Among the many cultivated and wild species of barnyard millet, Echinochloa frumentacea (Indian barnyard millet) and Echinochloa esculenta (Japanese barnyard millet) are two of the most popular. With its hardy nature and versatility, barnyard millet has the potential to contribute significantly to sustainable agriculture and food security in many parts of the world.
+            
+            
+            
+            
+            
+             
+             
+            </p>
+            <h2>Value added products </h2>
+            <ul> <li>
+            <strong>Vermicelli</strong> </li> </ul>
+            <p> Vermicelli, macaroni, and pasta have become a popular choice among children and adults alike due to their delicious taste, affordability, and ease of preparation. However, pasta is not just a tasty treat, but it can also serve as a foundation for healthy and nutritious meals when paired with nutrient-dense food partners like fiber-rich vegetables and beans, heart-healthy fish and oils, antioxidant-packed tomato sauce, and protein-rich cheeses, eggs, poultry, and lean meats.
+
+                To compete with other important cereal foods, small millets need to be incorporated into preprocessed or alternative millet-based foods. With this in mind, vermicelli, noodles, and macaroni have been produced using refined wheat flour blended with small millets at a 30% incorporation level. By doing so, we can provide consumers with healthier options while also promoting the consumption of small millets.</p>
+                <p><img src="https://5.imimg.com/data5/HO/UA/DK/SELLER-4351922/barnyard-millet-vermicelli-500x500.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Barnyard Millet Vermicelli at Rs 131.25/kg | Millet Vermicelli in  Tiruchirappalli | ID: 22087830455" data-noaft="1" style="width: 415px; height: 326.19px; margin: 0px;"></p>
+          
+                <ul>
+                    <li> <strong> Fermented food </strong></li>
+                </ul>
+                <p>Dosa and Idli, two popular fermented foods in India, are commonly eaten for breakfast and dinner in the southern part of the country. Little millet, a nutritious grain rich in protein, calcium, and fiber, is a key ingredient in these dishes, enhancing their flavor and nutritional value. Sprouted barnyard millet or malted grains are also used in the fermentation process, depending on personal preference. Overall, these fermented foods are an excellent way to incorporate millets into one's diet and enjoy their health benefits.</p>
+                    <p><img src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/kavitha-totsandmoms.com/Barnyard-Millet-Idli-Dosa-Batterarchana2.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Barnyard Millet Idli And Dosa Recipe by Archana's Kitchen" data-noaft="1" style="width: 415px; height: 343.413px; margin: 0px;"></p>
+                    <ul>
+                        <li> <strong>Bakery products</strong></li>
+                    </ul>
+                    <p>Bakery products are beloved by people of all ages due to their delicious taste, appealing colors, and easy digestibility. These baked goods have become an integral part of celebrating happy moments. In today's fast-paced world, individuals have limited time to spend on making breakfast, so bread, buns, biscuits, and other baked goods have become a popular choice. They serve as a convenient snack option and are widely available.
+
+                        To improve the nutritional value of bakery products, small millets have been incorporated in various proportions ranging from 10% to 50% to replace refined wheat flour. For instance, bread is standardized with 20% small millet, cake with 30%, cookies with 50%, soup sticks with 20%, and khari with 40%. These variations not only enhance the nutritional value of the baked goods but also add a unique flavor and texture to them.</p>
+                        <p><img src="https://www.researchgate.net/profile/Praween-Nishad-2/publication/352896382/figure/fig5/AS:1051161943625728@1627627945762/Barnyard-millet-cake.png" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="6 Barnyard millet cake | Download Scientific Diagram" data-noaft="1" style="width: 396.156px; height: 387px; margin: 0px;"></p>
+                        <ul>
+                            <li> <strong>Flaked products </strong></li>
+                        </ul>
+                        <p>Cereal popped products and flakes are a popular breakfast option, and currently, they are mostly made from corn. However, by utilizing suitable processing techniques, it is feasible to produce popped foods and flakes from millets as well. These Ready-To-Eat products have gained immense popularity due to their crisp and friable texture.
+
+                            The relatively smaller size and quick hydration properties of millets make them a suitable option for the production of flakes and popped products. To improve the variety of breakfast options, small millets were flaked and popped, and several recipes were standardized. These millet-based products offer a nutritious and tasty alternative to corn-based breakfast cereals.</p>
+                            <p><img src="data:image/jpeg;base64,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
+                                Z" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" alt="Organic Barnyard Millet Flakes – GreenDNA® India" data-noaft="1" style="width: 275px; height: 183px; margin: 0px;"></p> 
+                                
+                                <h2>Reference</h2>
+                                <hr>
+                                <p>
+                                 <ul>
+                                     
+                                    <li>[1] <a href="https://www.agrifarming.in/barnyard-millet-farming-production-practices#:~:text=Barnyard%20millet%20can%20be%20cultivated,%2C%20Gujarat%2C%20and%20Tamil%20Nadu.">Barnyard Millet Farming - Production Practices </a></li>
+                                    
+                                    <li>[2]Renganathan VG, Vanniarajan C, Karthikeyan A, Ramalingam J. (2020) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7325689/"> Barnyard Millet for Food and Nutritional Security: Current Status and Future Research Direction </a>Front Genet. doi: 10.3389/fgene.2020.00500. PMID: 32655612; PMCID: PMC7325689.</li>
+                                    <li>[3]T. Hoshino, T. Nakamura, Y. Seimiya, T. Kamada, G. Ishikawa, A. Ogasawara, S. Sagawa, M. Saito, H. Shimizu, M. Nishi, M. Watanabe, J. Takeda, Y. Takahata(2010) <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1439-0523.2009.01668.x">Production of a fully waxy line and analysis of waxy genes in the allohexaploid crop, Japanese barnyard millet </a> Frontiers in Plant Science, 10.3389/fpls.2015.00157.</li>
+                              
+                                    <li>[4] <a href="https://www.dhan.org/smallmillets2/file/value-sm.pdf"> Value Added Products from Millets CSIR-CFTRI, Mysore </a></li>
+                                    
+                                    <li>[5] <a href="https://timesofindia.indiatimes.com/city/madurai/value-addition-to-barnyard-millet-will-fetch-farmers-rs-110-per-kg/articleshow/63703375.cms">Value addition to barnyard millet will fetch farmers Rs 110 per kg </a></li>
+                                    
+                                    
+                                 </ul>
+                                </p>
+                               
+                                
+</body>
+</html>

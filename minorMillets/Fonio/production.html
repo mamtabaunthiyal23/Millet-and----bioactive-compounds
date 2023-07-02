@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production of fonio millet </title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+<style type="text/css">
+
+  /* ============ desktop view ============ */
+  @media all and (min-width: 992px) {
+  
+    .dropdown-menu li{
+      position: relative;
+    }
+    .dropdown-menu .submenu{ 
+      display: none;
+      position: absolute;
+      left:100%; top:-7px;
+    }
+    .dropdown-menu .submenu-left{ 
+      right:100%; left:auto;
+    }
+  
+    .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+    .dropdown-menu > li:hover > .submenu{
+      display: block;
+    }
+  }	
+  /* ============ desktop view .end// ============ */
+  
+  /* ============ small devices ============ */
+  @media (max-width: 991px) {
+  
+  .dropdown-menu .dropdown-menu{
+      margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+  }
+  
+  }	
+  /* ============ small devices .end// ============ */
+  
+  .masthead{
+      background-size: cover;
+      min-height: 100vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    opacity: 80%;
+  }
+  </style>
+  
+  
+  <script type="text/javascript">
+  //	window.addEventListener("resize", function() {
+  //		"use strict"; window.location.reload(); 
+  //	});
+  
+  
+    document.addEventListener("DOMContentLoaded", function(){
+          
+  
+        /////// Prevent closing from click inside dropdown
+      document.querySelectorAll('.dropdown-menu').forEach(function(element){
+        element.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      })
+  
+  
+  
+      // make it as accordion for smaller screens
+      if (window.innerWidth < 992) {
+  
+        // close all inner dropdowns when parent is closed
+        document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+          everydropdown.addEventListener('hidden.bs.dropdown', function () {
+            // after dropdown is hidden, then find all submenus
+              this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                // hide every submenu as well
+                everysubmenu.style.display = 'none';
+              });
+          })
+        });
+        
+        document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+          element.addEventListener('click', function (e) {
+      
+              let nextEl = this.nextElementSibling;
+              if(nextEl && nextEl.classList.contains('submenu')) {	
+                // prevent opening link if link needs to open dropdown
+                e.preventDefault();
+                console.log(nextEl);
+                if(nextEl.style.display == 'block'){
+                  nextEl.style.display = 'none';
+                } else {
+                  nextEl.style.display = 'block';
+                }
+  
+              }
+          });
+        })
+      }
+      // end if innerWidth
+  
+    }); 
+    // DOMContentLoaded  end
+  </script>
+    <title>History </title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+       <a class="navbar-brand" href="/home page .html">Home</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     <div class="collapse navbar-collapse" id="main_nav">
+     
+   
+     <ul class="navbar-nav">
+       
+       <li class="nav-item"><a class="nav-link" href="/About.html"> About </a></li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Millet  </a>
+           <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="/millets/history.html"> History </a></li>
+           
+          
+           <li><a class="dropdown-item" href="/millets/Taxonomy.html"> Taxonomy </a></li>
+           <li><a class="dropdown-item" href="/millets/types of millet.html"> Types </a>
+           <li><a class="dropdown-item" href="/millets/Nutrition.html"> Nutrition </a>
+           <li><a class="dropdown-item" href="/millets/Cultivation.html"> Cultivation </a>
+           <li><a class="dropdown-item" href="/millets/production.html"> Production </a>
+           </ul>
+       </li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Major Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Finger/history finger millet.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/taxonomy finger millet.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/varieties finger millet.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/nutrition finger millet.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/cultivation finger millet.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/production finger millet.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/antioxidant finger millet.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/varieties.html"> varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/production.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/antioxidant.html"> Antioxidant </a>
+   
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/antioxidant.html"> Antioxidant </a>
+           </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Praso/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Minor Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Kudo/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/production.html"> Production </a>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Little/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Little/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/antioxidants.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Teff/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/antioxidant .html"> Antioxidant </a>	
+            </ul>
+           </li>
+   
+           
+           </ul>
+     
+       
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Major Millet)  </a>
+              <ul class="dropdown-menu">
+      
+              <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+                 <ul class="submenu dropdown-menu">
+      
+      
+                  <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Dietary fibre component..html"> Dietary fiber </a></li>
+                
+                
+                    <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Polyphenols.html"> Polyphenols   </a>
+                
+               </ul>
+              </li>
+      
+              <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+                 <ul class="submenu dropdown-menu">
+      
+                <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/dietary fibre.html"> Dietary fiber  </a>
+                
+                  <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/polyphenols.html"> Polyphenols </a></li>
+                  
+                  
+               </ul>
+              </li>
+      
+              <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+                 <ul class="submenu dropdown-menu">
+      
+                <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/dietary fibre.html">Dietary fiber </a></li>
+                   
+                  <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/Polyphenol.html"> Polyphenols </a></li>
+                
+                
+               </ul>
+              </li>
+              <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+                 <ul class="submenu dropdown-menu">
+      
+                <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/dietary fibre.html"> Dietary fiber </a> </li>
+                
+                  <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/Polyphenols.html"> Polyphenols </a></li>
+                 
+                
+                
+               </ul>
+              </li>
+            
+             
+      
+              
+              </ul>
+          </li>
+      
+      
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Minor Millet)  </a>
+              <ul class="dropdown-menu">
+      
+              <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+                 <ul class="submenu dropdown-menu">
+      
+                  <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/dietary fibre.html"> Dietary fiber </a></li>
+                 
+                  <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/Polyphenols.html"> Polyphenol</a></li>
+              
+                
+               </ul>
+              </li>
+      
+              <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+                 <ul class="submenu dropdown-menu">
+      
+                  <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/dietary fibre.html"> Dietary fiber </a></li>
+                 
+                  <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/Phytochemicals.html"> Polyphenols </a></li>
+              
+               </ul>
+              </li>
+      
+              <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+                 <ul class="submenu dropdown-menu">
+      
+      
+                  <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/dietary fibre.html"> Dietary fiber </a></li>
+                  <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/polyphenols.html"> Polyphenol</a></li>
+                    
+                    
+               </ul>
+              </li>
+              <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+                 <ul class="submenu dropdown-menu">
+      
+                  <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/dietary fibre.html"> Dietary fiber </a></li>
+                 
+                  <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/polyphenols.html"> Polyphenols   </a></li>
+                
+               </ul>
+              </li>
+      
+              <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+                 <ul class="submenu dropdown-menu">
+      
+      
+                  <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/dietary fibre.html"> Dietary fiber </a></li>
+                  
+                  <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/phytochemicals.html"> Polyphenols </a>
+                
+               </ul>
+              </li>
+            
+             
+      
+              
+              </ul>
+          </li>
+      
+          <li class="nav-item"><a class="nav-link" href="/team.html"> Team </a></li>
+      
+        </ul>
+   
+     
+   
+     </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+   </nav>
+<body>
+    <body style="background-color:antiquewhite;"></body> 
+<body>
+    
+    <style>
+        p{font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+        font-style: normal;}
+        </style>
+        <h1>Production </h1>
+        <p> Fonio, a small grain crop that is mainly grown and consumed in West African countries, has shown resilient production growth over the years. In 2021, its global production was estimated to be worth $X in export price, which marks a decline compared to the previous year's peak production level of $X. Although the yield per hectare in India, one of the countries where fonio is cultivated, remained relatively unchanged at less than X kg per ha, future yields may still be subject to adverse weather conditions despite the increased use of modern agricultural techniques.
+
+            Guinea is the largest producer of fonio in the world, accounting for over 75% of global production in 2019. The global fonio market was estimated to be 673,000 tonnes in 2016. Fonio's popularity has been on the rise, and in December 2018, the European Commission authorized its commercialization as a novel food in the European Union. Obà Food, an Italian company, submitted fonio for approval, which has paved the way for the manufacture and marketing of new food products.</p>
+            <h2>Value added products </h2>
+            <hr>
+            <p>
+                <ul>
+                    <li> <strong>Vermicelli:-  </strong></li>
+                </ul>
+               <p>Fonio Obà pasta is a wholesome and healthy choice as it is made solely from water and flour, preserving the original delicate aroma of the grain that has been cultivated for over 5,000 years. Unlike other grains, Fonio has not been genetically modified or subjected to laboratory processes, making it a pure and ancient grain. It is primarily cultivated by small rural communities in the arid sub-Saharan region, and therefore not a result of intensive agricultural practices that can have a detrimental environmental impact.
+
+                Fonio Obà pasta stands out for its versatility, delicate taste, and high nutritional value. It is an excellent source of proteins, fibers, B vitamins, iron, and zinc, with a low glycemic index and nickel content. Fonio's rich nutritional profile makes it a perfect choice for a healthy diet, and its natural cultivation process further enhances its health benefits.</p>
+            <p><img src="https://www.obafoodgroup.com/images/blog/Pasta-al-Fonio/rsz_pasta_cover.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Why a Fonio pasta? - Obà Food" data-noaft="1" style="width: 351px; height: 183.727px; margin: 0px;"></p>
+            <ul>
+                <li> <strong>Brooklyn Brewery brews </strong></li>
+                <p>Brooklyn Brewery has teamed up with Yolélé to launch a unique brew that features a super cool ingredient. The Brooklyn Brewery x Yolélé Fonio White Beer is brewed with fonio, an ancient West African grain that is highly nutritious and has been introduced to the American market by Yolélé. Both Yolélé and Brooklyn Brewery are passionate about promoting sustainable and responsible practices in the food and beverage industry. The beer boasts a beautiful golden hue, thanks to the tiny blond fonio grains that are packed with essential nutrients and health benefits. The collaboration between these two companies highlights their shared commitment to sourcing ingredients strategically and promoting sustainability.</p>
+            </ul>
+            <p><img width="800" height="399" src="https://www.craftbrewingbusiness.com/wp-content/uploads/2022/10/Brooklyn-Brewery.jpg" alt="Brooklyn Brewery" class="wp-image-80153" srcset="https://www.craftbrewingbusiness.com/wp-content/uploads/2022/10/Brooklyn-Brewery.jpg 800w, https://www.craftbrewingbusiness.com/wp-content/uploads/2022/10/Brooklyn-Brewery-300x150.jpg 300w, https://www.craftbrewingbusiness.com/wp-content/uploads/2022/10/Brooklyn-Brewery-768x383.jpg 768w" sizes="(max-width: 800px) 100vw, 800px"></p>
+            <ul>
+                <li> <strong> Porridge </strong></li>
+                <p> Preparing this delicious and healthy vegan fonio breakfast porridge recipe is quick and easy, taking just around 15 minutes. Before diving into the recipe, let's take a look at the ingredients.
+
+                    The base of the porridge is made up of fonio (of course!), water, plant-based milk, and a sweetener.</p>
+                <p><img src="https://i0.wp.com/www.savourous.com/wp-content/uploads/2021/03/fonio-porridge4.jpg?fit=2016%2C2016&amp;ssl=1" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Fonio porridge - Savourous" data-noaft="1" style="width: 387px; height: 387px; margin: 0px;"></p>
+            </ul>
+            
+            <h2>Reference</h2>
+            <hr>
+            <p>
+             <ul>
+                 
+                
+               
+                <li> [1] S. D. Abdul and Afam I. O. Jideani (2019)
+                    <a href="https://www.researchgate.net/publication/336418429_Fonio_Digitaria_spp_Breeding"> Fonio (Digitaria spp.) Breeding</a> DOI:10.1007/978-3-030-23108-8_2</li>
+                <li>[2] Dr. Usha Dharmaraj  <a href="https://www.dhan.org/smallmillets2/file/value-sm.pdf">Value Added Products from Millets CSIR-CFTRI, Mysore </a> Department of Grain Science and Technology
+                    CSIR-CFTRI, Mysore</li>
+                    <li> [3] <a href="https://knoema.com/data/agriculture-indicators-production+fonio">Fonio production in the World </a> WORLD DATA ATLAS </li>
+                
+             </ul>
+            </p>
+           
+</body>
+</html>

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+<style type="text/css">
+
+  /* ============ desktop view ============ */
+  @media all and (min-width: 992px) {
+  
+    .dropdown-menu li{
+      position: relative;
+    }
+    .dropdown-menu .submenu{ 
+      display: none;
+      position: absolute;
+      left:100%; top:-7px;
+    }
+    .dropdown-menu .submenu-left{ 
+      right:100%; left:auto;
+    }
+  
+    .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+    .dropdown-menu > li:hover > .submenu{
+      display: block;
+    }
+  }	
+  /* ============ desktop view .end// ============ */
+  
+  /* ============ small devices ============ */
+  @media (max-width: 991px) {
+  
+  .dropdown-menu .dropdown-menu{
+      margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+  }
+  
+  }	
+  /* ============ small devices .end// ============ */
+  
+  .masthead{
+      background-size: cover;
+      min-height: 100vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    opacity: 80%;
+  }
+  </style>
+  
+  
+  <script type="text/javascript">
+  //	window.addEventListener("resize", function() {
+  //		"use strict"; window.location.reload(); 
+  //	});
+  
+  
+    document.addEventListener("DOMContentLoaded", function(){
+          
+  
+        /////// Prevent closing from click inside dropdown
+      document.querySelectorAll('.dropdown-menu').forEach(function(element){
+        element.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      })
+  
+  
+  
+      // make it as accordion for smaller screens
+      if (window.innerWidth < 992) {
+  
+        // close all inner dropdowns when parent is closed
+        document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+          everydropdown.addEventListener('hidden.bs.dropdown', function () {
+            // after dropdown is hidden, then find all submenus
+              this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                // hide every submenu as well
+                everysubmenu.style.display = 'none';
+              });
+          })
+        });
+        
+        document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+          element.addEventListener('click', function (e) {
+      
+              let nextEl = this.nextElementSibling;
+              if(nextEl && nextEl.classList.contains('submenu')) {	
+                // prevent opening link if link needs to open dropdown
+                e.preventDefault();
+                console.log(nextEl);
+                if(nextEl.style.display == 'block'){
+                  nextEl.style.display = 'none';
+                } else {
+                  nextEl.style.display = 'block';
+                }
+  
+              }
+          });
+        })
+      }
+      // end if innerWidth
+  
+    }); 
+    // DOMContentLoaded  end
+  </script>
+    <title>History </title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+       <a class="navbar-brand" href="/home page .html">Home</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     <div class="collapse navbar-collapse" id="main_nav">
+     
+   
+     <ul class="navbar-nav">
+       
+       <li class="nav-item"><a class="nav-link" href="/About.html"> About </a></li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Millet  </a>
+           <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="/millets/history.html"> History </a></li>
+           
+          
+           <li><a class="dropdown-item" href="/millets/Taxonomy.html"> Taxonomy </a></li>
+           <li><a class="dropdown-item" href="/millets/types of millet.html"> Types </a>
+           <li><a class="dropdown-item" href="/millets/Nutrition.html"> Nutrition </a>
+           <li><a class="dropdown-item" href="/millets/Cultivation.html"> Cultivation </a>
+           <li><a class="dropdown-item" href="/millets/production.html"> Production </a>
+           </ul>
+       </li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Major Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Finger/history finger millet.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/taxonomy finger millet.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/varieties finger millet.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/nutrition finger millet.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/cultivation finger millet.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/production finger millet.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/antioxidant finger millet.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/varieties.html"> varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/production.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/antioxidant.html"> Antioxidant </a>
+   
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/antioxidant.html"> Antioxidant </a>
+           </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Praso/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Minor Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Kudo/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/production.html"> Production </a>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Little/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Little/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/antioxidants.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Teff/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/antioxidant .html"> Antioxidant </a>	
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+       
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Major Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Dietary fibre component..html"> Dietary fiber </a></li>
+            
+            
+                <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Polyphenols.html"> Polyphenols   </a>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/dietary fibre.html"> Dietary fiber  </a>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/polyphenols.html"> Polyphenols </a></li>
+              
+              
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/dietary fibre.html">Dietary fiber </a></li>
+               
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/Polyphenol.html"> Polyphenols </a></li>
+            
+            
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/dietary fibre.html"> Dietary fiber </a> </li>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/Polyphenols.html"> Polyphenols </a></li>
+             
+            
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+  
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Minor Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/Polyphenols.html"> Polyphenol</a></li>
+          
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/Phytochemicals.html"> Polyphenols </a></li>
+          
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/dietary fibre.html"> Dietary fiber </a></li>
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/polyphenols.html"> Polyphenol</a></li>
+                
+                
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/polyphenols.html"> Polyphenols   </a></li>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/dietary fibre.html"> Dietary fiber </a></li>
+              
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/phytochemicals.html"> Polyphenols </a>
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+      <li class="nav-item"><a class="nav-link" href="/team.html"> Team </a></li>
+  
+    </ul>
+   
+     
+   
+     </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+   </nav>
+<body>
+    <body style="background-color:antiquewhite;"></body> 
+<body>
+<body>
+   
+    <style>
+        p{font-family:'Times New Roman', Times, serif; 
+        font-size: medium;
+        font-style: normal;}
+        table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+    
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+    background-color:snow;
+    }
+    
+        </style>
+
+<body>
+<h2>Polyphenols present in Finger millet </h2>
+<hr>
+<table>
+    <tr>
+        <td>S.No. </td>
+        <td>COMPOUND  NAME </td>
+        <td>IUPAC NAME </td>
+        <td>MOLECULAR FORMULA </td>
+        <td>STRUCTURE </td>
+        <td>SYNONYMS </td>
+        <td>SOURCES</td>
+        <td>HEALTH BENEFITS </td>
+        <td>REFERENCE </td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>  <a href="https://pubchem.ncbi.nlm.nih.gov/compound/370#section=Uses"class="button">Gallic acid  </a> 
+        </td> </td>
+        <td>3,4,5-trihydroxybenzoic acid</td>
+        <td>C<sub>7</sub>H<sub>6</sub>O<sub>5</sub> </td>
+        <td><img src="/images/Gallic_Acid_300.png" alt="" width=""></td>
+        <td>Benzoic acid, 3,4,5-trihydroxy-Gallic acid, 
+
+            
+            
+         
+            
+            Pyrogallol-5-carboxylic acid,
+            
+            Kyselina gallova,
+            
+          
+            
+            3,4,5-Trihydroxybenzoate,
+            
+           
+            
+            05                      
+            
+            
+            
+            CHEBI:30778,
+            
+            AI3-16412,
+            
+            Kyselina 3,4,5-trihydroxybenzoova etc. 
+            
+           </td>
+        <td>Blueberry, blackberry, strawberry, plums, grapes, mango, cashew nut, hazelnut, walnut, tea, wine. </td>
+        <td>Therapeutic activities in gastrointestinal, neuropsychological, metabolic, and cardiovascular disorders.</td>
+        <td>  <a href="https://www.frontiersin.org/articles/10.3389/fnut.2022.1056445/full,https://pubchem.ncbi.nlm.nih.gov/compound/370#section=Uses "class="button">[1,2] </a> 
+        </td></tr>
+        <tr>
+        <td>2</td>
+        <td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/8468"class="button">Vanillic acid  </a> </td>
+        <td>4-hydroxy-3-methoxybenzoic acid</td>
+        <td>C<sub>8</sub>H<sub>8</sub>O<sub>4</sub> </td>
+        
+        <td><img src=/images/Vanillic_Acid_300.png alt="" width=""></td>
+        <td>Acide vanllique
+          Benzoic aci, 4-hydroxy-3-methoxy-
+          
+          p-Vanillic acid, 4-hydroxy-
+
+          Protocatechuic acid, 3-methyl ester
+          
+          4-hydroxy-3-methoxy-Benzoic acid etc. 
+          
+          </td>
+        <td> It is found in several fruits, olives, and cereal grains (e.g., whole wheat), as well as in wine, beer, and cider. </td>
+        <td>Vanillic acid exerts diverse bioactivity against cancer, diabetes, obesity, neurodegenerative, cardiovascular, and hepatic diseases by inhibition of the associated molecular pathways.</td>
+        <td><a href="https://www.mdpi.com/2304-8158/9/4/534#:~:text=Vanillic%20Acid%20(VA),cider%20%5B70%2C71%5D.,https://www.sciencedirect.com/science/article/abs/pii/S0924224422000711#:~:text=Vanillic%20acid%20exerts%20diverse%20bioactivity,as%20fungal%20and%20bacterial%20infecti%3E%3E%3E%3E%3E%3E%3E%3E%3E%3E%3E%3E"class="button">[3,4]</a> </td>
+        
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/72"class="button">Protocatechuic acid </a></td>
+      <td>3,4-dihydroxybenzoic acid</td>
+      <td>C<sub>7</sub>H<sub>6</sub>O<sub>4</sub> </td>
+      <td><img src="/images/3,4-Dihydroxybenzoic_acid_300.png" alt="" width=""></td>
+      <td>Benzoic acid, 3,4-dihydroxy-
+
+        4,5-Dihydroxybenzoic acid
+        
+        3,4-Dihydroxybenzoicacid,4-Carboxy-1,2-dihydroxybenzene
+
+        Protocatehuic acid. </td>
+      <td>Protocatechuic acid (PCA) is a phenolic compound commonly found in a wide range of spices, including garlic, onion, star anise, olive and chicory; vegetables, such as cauliflower and bitter melon; and as a primary metabolite of anthocyanins in human intestines.</td>
+      <td> Protocatechuic acid exerts multiple biological properties, such as anticancer, anti-atherosclerosis, antidiabetes, and neuroprotection.</td>
+      <td><a href="https://pubmed.ncbi.nlm.nih.gov/22519395/,"class="button">[5]</a></td>
+    
+    </tr>
+    <tr>
+    <td>4</td>
+    <td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/9064"class="button">Catechin </a></td>
+    
+    <td>(2R,3S)-2-(3,4-dihydroxyphenyl)-3,4-dihydro-2H-chromene-3,5,7-triol</td>
+    <td>C<sub>15</sub>H<sub>14</sub>O<sub>6</sub> </td>
+    <td><img src="/images/Cianidanol_300.png" alt="" width=""></td>
+    <td>Catechuic acid,
+
+      Catechinic acid,
+      
+      Cyanidanol,
+      
+      D-Catechin,Cianidol,
+
+      (+)-Catechol,
+      
+      (+)-Cyanidanol,
+      
+      Biocatechin. </td>
+    <td>High concentrations of catechin can be found in red wine, broad beans, black grapes, apricots and strawberries; epicatechin concentrations are high in apples, blackberries, broad beans, cherries, black grapes, pears, raspberries, and chocolate. </td>
+    <td>It has been proved that catechins could inhibit carcinogenesis, tumor growth, cancer cell invasion, and tumor angiogenesis, by suppressing the induction of proangiogenic factors, such as vascular endothelial growth factor (VEGF).</td>
+    <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6384718/"class="button">[6] </a></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/5280343"class="button">Quercetin </a></td>
+      <td>2-(3,4-dihydroxyphenyl)-3,5,7-trihydroxychromen-4-one</td>
+      <td>C<sub>15</sub>H<sub>10</sub>O<sub>7</sub> </td>
+      <td><img src="/images/Quercetin_300.png" alt="" width=""></td>
+      <td>Meletin,
+
+        Sophoretin,
+        
+        Quercetine,
+        
+        Xanthaurine,
+        
+        Quercetol,
+        
+        Quertine. </td>
+      <td>Fruits and vegetables are the primary dietary sources of quercetin, particularly citrus fruits, apples, onions, parsley, sage, tea, and red wine. Olive oil, grapes, dark cherries, and dark berries such as blueberries, blackberries, and bilberries are also high in quercetin and other flavonoids.</td>
+      <td>A diet rich in quercetin has various health-promoting benefits. It acts as an agent to lower coagulation, hyperglycemia, inflammation, and hypertension. Various clinical studies show that supplementation of quercetin is used to prevent and treat various chronic diseases such as cardiovascular disorders.</td>
+      <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9032170/#:~:text=A%20diet%20rich%20in%20quercetin,as%20cardiovascular%20disorders%20%5B10%5D."class="button">[7] </a></td>
+      
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/1738"class="button"> Homovanillic acid</a></td>
+      <td>2-(4-hydroxy-3-methoxyphenyl)acetic acid</td>
+      <td>C<sub>9</sub>H<sub>10</sub>O<sub>4</sub> </td>
+      <td><img src="/images/Homovanillic_acid_300.png" alt="" width=""></td>
+      <td>4-Hydroxy-3-methoxyphenylacetic acid,
+
+        2-(4-hydroxy-3-methoxyphenyl)acetic acid,
+        
+        Vanillacetic acid,
+        
+        Vanilacetic acid,
+        
+        Benzeneacetic acid, 4-hydroxy-3-methoxy-
+        
+        3-Methoxy-4-hydroxyphenylacetic acid,
+        
+        Homovanillate . </td>
+      <td>Homovanillic acid is a natural product found in Aloe africana, Ginkgo biloba, and other organisms with data available.</td>
+      <td>Homovanillic acid is a dopamine metabolite found to be associated with aromatic L-amino acid decarboxylase deficiency, celiac disease, growth hormone deficiency, and sepiapterin reductase deficiency.</td>
+      <td><a href="https://www.medchemexpress.com/Homovanillic_acid.html?utm_source=google&utm_medium=CPC&utm_campaign=Others&utm_term=HY-N0384&utm_content=Homovanillic%20acid&gclid=Cj0KCQjwpPKiBhDvARIsACn-gzDfKWuIlrvzAEFuuwU1mVvERPo0mtsncXrmeL5ap3ciG_QD2THBlB0aAvOpEALw_wcB"class="button">[8] </a></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/442428#section=Structures"class="button">Naringin </a></td>
+      
+      <td>(2S)-7-[(2S,3R,4S,5S,6R)-4,5-dihydroxy-6-(hydroxymethyl)-3-[(2S,3R,4R,5R,6S)-3,4,5-trihydroxy-6-methyloxan-2-yl]oxyoxan-2-yl]oxy-5-hydroxy-2-(4-hydroxyphenyl)-2,3-dihydrochromen-4-one</td>
+      <td>C<sub>27</sub>H<sub>32</sub>O<sub>14</sub> </td>
+      <td><img src="/images/Naringin_300.png" alt="" width=""></td>
+      <td>Naringoside,
+
+        aurantiin,
+        
+        Naringenin 7-O-neohesperidoside,
+        
+        4'5-diOH-Flavone-7-rhgluc
+        
+        
+        
+        </td> 
+     <td>Naringenin is a flavonoid belonging to flavanones subclass. It is widely distributed in several Citrus fruits, bergamot, tomatoes and other fruits, being also found in its glycosides form (mainly naringin).</td>
+     <td>Naringenin is endowed with broad biological effects on human health , which includes a decrease in lipid peroxidation biomarkers and protein carbonylation, promotes carbohydrate metabolism, increases antioxidant defenses, scavenges reactive oxygen species, modulates immune system activity, and also exerts anti-atherogenic and anti-inflammatory effects.</td>
+     <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469163/#:~:text=Naringenin%20is%20endowed%20with%20broad,activity%2C%20and%20also%20exerts%20anti"class="button">[9] </a></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/439533#section=3D-Conformer"class="button"> Taxifolin</a></td>
+        
+        <td>(2R,3R)-2-(3,4-dihydroxyphenyl)-3,5,7-trihydroxy-2,3-dihydrochromen-4-one</td>
+        <td>C<sub>15</sub>H<sub>12</sub>O<sub>7</sub> </td>
+        <td><img src="/images/Taxifolin_300.png" alt="" width=""></td>
+        <td>Taxifoliol,
+
+          (2R,3R)-Dihydroquercetin
+          
+          24198-97-8,
+          
+          (+)-Dihydroquercetin . </td> 
+       <td> It is found in onion, milk thistle, French maritime pine bark and Douglas fir bark. It is also used in various commercial preparations like Legalon™, Pycnogenol®, and Venoruton®.</td>
+       <td>Taxifolin has shown to have anti-proliferative effects on many types of cancer cells by inhibiting cancer cell lipogenesis. By inhibiting the fatty acid synthase in cancer cells, taxifolin is able to prevent the growth and spread of cancer cells.</td>
+       <td><a href="https://pubmed.ncbi.nlm.nih.gov/31325613/#:~:text=Taxifolin%20(3%2C5%2C7,Pycnogenol%C2%AE%2C%20and%20Venoruton%C2%AE."class="button">[10] </a></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td><a href=""class="button">Ferulic acid </a></td>
+          
+          <td>(E)-3-(4-hydroxy-3-methoxyphenyl)prop-2-enoic acid</td>
+          <td>C<sub>10</sub>H<sub>10</sub>O<sub>4</sub> </td>
+          <td><img src="/images/Ferulic_acid_300.png" alt="" width=""></td>
+          <td>4-Hydroxy-3-methoxycinnamic acid,
+
+            trans-4-Hydroxy-3-methoxycinnamic acid,
+            
+            3-(4-Hydroxy-3-methoxyphenyl)acrylic acid,
+            
+            (E)-Ferulic acid,
+            
+            Coniferic acid . </td> 
+         <td>It is commonly found in commelinid plants (rice, wheat, oats, and pineapple), grasses, grains, vegetables, flowers, fruits, leaves, beans, seeds of coffee, artichoke, peanut and nuts.</td>
+         <td>It exhibits a wide range of therapeutic effects against various diseases like cancer, diabetes, cardiovascular and neurodegenerative.</td>
+         <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5466124/#:~:text=Ferulic%20acid%3A%20natural%20sources%20and,72%5D%2C%20%5B85%5D."class="button">[11] </a></td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/637542#section=Names-and-Identifiers"class="button">p-Coumaric acid </a></td>
+            
+            <td>(E)-3-(4-hydroxyphenyl)prop-2-enoic acid</td>
+            <td>C<sub>9</sub>H<sub>8</sub>O<sub>3</sub> </td>
+            <td><img src="/images/4-Hydroxycinnamic_acid_300.png" alt="" width=""></td>
+            <td>p-Hydroxycinnamic acid,
+
+              trans-4-Hydroxycinnamic acid,
+              
+              4-Coumaric acid, 3-(4-hydroxyphenyl)acrylic acid,
+
+              Para-Coumaric acid,
+              
+              Hydroxycinnamic acid. </td> 
+           <td>p-Coumaric acid can be found in a wide variety of edible plants and fungi such as peanuts, navy beans, tomatoes, carrots, basil and garlic. It is found in wine and vinegar. It is also found in barley grain.</td>
+           <td>p-Coumaric acid can attenuate skin hyperpigmentation through multiple mechanisms. UV and other pathophysiological conditions stimulate the production of reactive oxygen species (ROS) and multiple signaling pathways leading to enhanced gene expression of tyrosinase and increased melanin synthesis.</td>
+           <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6720745/#:~:text=p%2DCoumaric%20acid%20can%20attenuate,tyrosinase%20and%20increased%20melanin%20synthesis."class="button"></a>[12] </td>
+            </tr>
+           
+   
+</table>
+<h2>Reference</h2>
+<hr>
+        <p>
+            <ul>
+                <li>[1] Vineet Singh 
+                  , GyuDae Lee
+                  , HyunWoo Son
+                  , Sliti Amani
+                  ,
+                  Mamta Baunthiyal and Jae-Ho Shin(2022) <a href="https://www.frontiersin.org/articles/10.3389/fnut.2022.1056445/full"class="button">Anti-diabetic prospects of dietary
+                    bio-actives of millets
+                    and the significance of the gut
+                    microbiota: A case of finger millet</a>Front. Nutr. 9:1056445.
+                    doi: 10.3389/fnut.2022.1056445 . </li>
+                <li>[2] <a href="https://pubchem.ncbi.nlm.nih.gov/compound/370#section=Uses"class="button"> Gallic Acid </a></li>
+                
+                <li>[3] Sotirios Kiokias ,Charalampos Proestos  and Vassiliki Oreopoulou(2020)<a href="https://www.mdpi.com/2304-8158/9/4/534#:~:text=Vanillic%20Acid%20(VA),cider%20%5B70%2C71%5D."class="button">Phenolic Acids of Plant Origin—A Review on Their Antioxidant Activity In Vitro (O/W Emulsion Systems) Along with Their in Vivo Health Biochemical Properties. </a>Foods. 2020; 9(4):534. https://doi.org/10.3390/foods9040534 . </li>
+                <li>[4] Jaskiran Kaur , Monica Gulati , Sachin Kumar Singh , Gowthamarajan Kuppusamy , Bhupinder Kapoor , Vijay Mishra , Saurabh Gupta , Mohammed F. Arshad , Omji Porwal , Niraj Kumar Jha , M.V.N.L. Chaitanya , Dinesh Kumar Chellappan , Gaurav Gupta , Piyush Kumar Gupta , Kamal Dua , Rubiya Khursheed , Ankit Awasthi , Leander Corrie(2022) <a href="https://www.sciencedirect.com/science/article/abs/pii/S0924224422000711#:~:text=Vanillic%20acid%20exerts%20diverse%20bioactivity,as%20fungal%20and%20bacterial%20infecti>"class="button">Discovering multifaceted role of vanillic acid beyond flavours: Nutraceutical and therapeutic potential</a>Trends in Food Science & Technology
+                  Volume 122,https://doi.org/10.1016/j.tifs.2022.02.023 . </li>
+               
+                  <li>[5] Masella R, Santangelo C, D'Archivio M, Li Volti G, Giovannini C, Galvano F(2012)<a href="https://pubmed.ncbi.nlm.nih.gov/22519395/"class="button">Protocatechuic acid and human disease prevention: biological activities and molecular mechanisms.</a>doi: 10.2174/092986712800672102. PMID: 22519395.</li>
+                
+                <li>[6]Isemura M.<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6384718/"class="button"> Catechin in Human Health and Disease.</a> doi: 10.3390/molecules24030528. PMID: 30717121; PMCID: PMC6384718.</li>
+                <li>[7] Deepika, Maurya PK.(2022)<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9032170/#:~:text=A%20diet%20rich%20in%20quercetin,as%20cardiovascular%20disorders%20%5B10%5D."class="button">Health Benefits of Quercetin in Age-Related Diseases.</a>doi: 10.3390/molecules27082498. PMID: 35458696; PMCID: PMC9032170.</li>
+               
+                <li>[8]<a href="https://www.medchemexpress.com/Homovanillic_acid.html?utm_source=google&utm_medium=CPC&utm_campaign=Others&utm_term=HY-N0384&utm_content=Homovanillic%20acid&gclid=Cj0KCQjwpPKiBhDvARIsACn-gzDfKWuIlrvzAEFuuwU1mVvERPo0mtsncXrmeL5ap3ciG_QD2THBlB0aAvOpEALw_wcB"class="button">Homovanillic acid</a></li>
+                <li>[9] Salehi B, Fokou PVT, Sharifi-Rad M, Zucca P, Pezzani R, Martins N, Sharifi-Rad J.(2019)<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469163/#:~:text=Naringenin%20is%20endowed%20with%20broad,activity%2C%20and%20also%20exerts%20anti"class="button"> The Therapeutic Potential of Naringenin: A Review of Clinical Trials. </a> doi: 10.3390/ph12010011. PMID: 30634637; PMCID: PMC6469163.</li>
+                <li>[10] Sunil C, Xu B.(2019)<a href="https://pubmed.ncbi.nlm.nih.gov/31325613/#:~:text=Taxifolin%20(3%2C5%2C7,Pycnogenol%C2%AE%2C%20and%20Venoruton%C2%AE."class="button">An insight into the health-promoting effects of taxifolin (dihydroquercetin). </a> doi: 10.1016/j.phytochem.2019.112066. Epub 2019 Jul 17. PMID: 31325613.</li>
+                
+                <li>[11] Kumar N, Pruthi V. (2014)<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5466124/#:~:text=Ferulic%20acid%3A%20natural%20sources%20and,72%5D%2C%20%5B85%5D."class="button">Potential applications of ferulic acid from natural sources.</a>doi: 10.1016/j.btre.2014.09.002. PMID: 28626667; PMCID: PMC5466124.</li>
+                <li>[12] Boo YC(2019)<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6720745/#:~:text=p%2DCoumaric%20acid%20can%20attenuate,tyrosinase%20and%20increased%20melanin%20synthesis."class="button">p-Coumaric Acid as An Active Ingredient in Cosmetics: A Review Focusing on its Antimelanogenic Effects. </a>doi: 10.3390/antiox8080275. PMID: 31382682; PMCID: PMC6720745.</li>
+               
+                </ul>
+                    
+</body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dietary fibre components of finger millet
+    </title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+<style type="text/css">
+
+  /* ============ desktop view ============ */
+  @media all and (min-width: 992px) {
+  
+    .dropdown-menu li{
+      position: relative;
+    }
+    .dropdown-menu .submenu{ 
+      display: none;
+      position: absolute;
+      left:100%; top:-7px;
+    }
+    .dropdown-menu .submenu-left{ 
+      right:100%; left:auto;
+    }
+  
+    .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+    .dropdown-menu > li:hover > .submenu{
+      display: block;
+    }
+  }	
+  /* ============ desktop view .end// ============ */
+  
+  /* ============ small devices ============ */
+  @media (max-width: 991px) {
+  
+  .dropdown-menu .dropdown-menu{
+      margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+  }
+  
+  }	
+  /* ============ small devices .end// ============ */
+  
+  .masthead{
+      background-size: cover;
+      min-height: 100vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    opacity: 80%;
+  }
+  </style>
+  
+  
+  <script type="text/javascript">
+  //	window.addEventListener("resize", function() {
+  //		"use strict"; window.location.reload(); 
+  //	});
+  
+  
+    document.addEventListener("DOMContentLoaded", function(){
+          
+  
+        /////// Prevent closing from click inside dropdown
+      document.querySelectorAll('.dropdown-menu').forEach(function(element){
+        element.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      })
+  
+  
+  
+      // make it as accordion for smaller screens
+      if (window.innerWidth < 992) {
+  
+        // close all inner dropdowns when parent is closed
+        document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+          everydropdown.addEventListener('hidden.bs.dropdown', function () {
+            // after dropdown is hidden, then find all submenus
+              this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                // hide every submenu as well
+                everysubmenu.style.display = 'none';
+              });
+          })
+        });
+        
+        document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+          element.addEventListener('click', function (e) {
+      
+              let nextEl = this.nextElementSibling;
+              if(nextEl && nextEl.classList.contains('submenu')) {	
+                // prevent opening link if link needs to open dropdown
+                e.preventDefault();
+                console.log(nextEl);
+                if(nextEl.style.display == 'block'){
+                  nextEl.style.display = 'none';
+                } else {
+                  nextEl.style.display = 'block';
+                }
+  
+              }
+          });
+        })
+      }
+      // end if innerWidth
+  
+    }); 
+    // DOMContentLoaded  end
+  </script>
+    <title>History </title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+       <a class="navbar-brand" href="/home page .html">Home</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     <div class="collapse navbar-collapse" id="main_nav">
+     
+   
+     <ul class="navbar-nav">
+       
+       <li class="nav-item"><a class="nav-link" href="/About.html"> About </a></li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Millet  </a>
+           <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="/millets/history.html"> History </a></li>
+           
+          
+           <li><a class="dropdown-item" href="/millets/Taxonomy.html"> Taxonomy </a></li>
+           <li><a class="dropdown-item" href="/millets/types of millet.html"> Types </a>
+           <li><a class="dropdown-item" href="/millets/Nutrition.html"> Nutrition </a>
+           <li><a class="dropdown-item" href="/millets/Cultivation.html"> Cultivation </a>
+           <li><a class="dropdown-item" href="/millets/production.html"> Production </a>
+           </ul>
+       </li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Major Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Finger/history finger millet.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/taxonomy finger millet.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/varieties finger millet.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/nutrition finger millet.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/cultivation finger millet.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/production finger millet.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/antioxidant finger millet.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/varieties.html"> varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/production.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/antioxidant.html"> Antioxidant </a>
+   
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/antioxidant.html"> Antioxidant </a>
+           </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Praso/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Minor Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Kudo/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/production.html"> Production </a>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Little/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Little/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/antioxidants.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Teff/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/antioxidant .html"> Antioxidant </a>	
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+   
+ 
+       
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Major Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Dietary fibre component..html"> Dietary fiber </a></li>
+            
+            
+                <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Polyphenols.html"> Polyphenols   </a>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/dietary fibre.html"> Dietary fiber  </a>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/polyphenols.html"> Polyphenols </a></li>
+              
+              
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/dietary fibre.html">Dietary fiber </a></li>
+               
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/Polyphenol.html"> Polyphenols </a></li>
+            
+            
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/dietary fibre.html"> Dietary fiber </a> </li>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/Polyphenols.html"> Polyphenols </a></li>
+             
+            
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+  
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Minor Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/Polyphenols.html"> Polyphenol</a></li>
+          
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/Phytochemicals.html"> Polyphenols </a></li>
+          
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/dietary fibre.html"> Dietary fiber </a></li>
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/polyphenols.html"> Polyphenol</a></li>
+                
+                
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/polyphenols.html"> Polyphenols   </a></li>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/dietary fibre.html"> Dietary fiber </a></li>
+              
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/phytochemicals.html"> Polyphenols </a>
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+      <li class="nav-item"><a class="nav-link" href="/team.html"> Team </a></li>
+  
+    </ul>
+     
+   
+     </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+   </nav>
+<body>
+    <body style="background-color:antiquewhite;"></body> 
+<body>
+<body>
+   
+    <style>
+        p{font-family:'Times New Roman', Times, serif; 
+        font-size: medium;
+        font-style: normal;}
+        table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+    
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+    background-color:snow;
+    }
+    
+        </style>
+        
+        <h2>Dietary fibre components of Teff millet</h2>
+        <hr>
+       <p>Teff stands out among other grains due to its remarkably high content of crude dietary fiber, boasting an impressive 12.2 grams per 100 grams. This exceptional grain offers a combination of soluble and insoluble fiber, with the latter playing a key role in adding bulk to stool, promoting regular bowel movements, and effectively preventing constipation<a href="https://www.netmeds.com/health-library/post/teff-discover-the-incredible-health-benefits-of-this-superfood"class="button">[1]</a>.</p>
+       <h2>
+      Physico-chemical properties of dietary fibre
+        
+        
+    </h2>
+    <hr>
+
+    <p>
+      Dietary fibre is a highly complex mixture of polysaccharides that perform a wide range of functions and activities as they traverse the gastrointestinal tract. The specific functions and activities of dietary fibre are largely determined by their physico-chemical properties, which can vary widely between different types of fibres. In the following paragraphs, we will discuss some of the key properties of dietary fibre .
+    </p>
+    <ul>
+      <li> <strong>Particle size and bulk volume </strong></li>
+      <p>Particle size is a critical factor in determining a range of events that take place in the digestive tract, such as transit time, fermentation, and fecal excretion. The size of dietary fibre particles varies depending on the type of cell walls present in the foods and the degree of processing they undergo. During the digestion process, the particle size of fibre may change as a result of chewing, grinding, and bacterial degradation in the large intestine. For instance, research has shown that reducing the particle size of coconut residue from 1,127–550 μm can increase its hydration properties due to the increase in surface area and total pore volume, as well as structural modification. However, when the particle size is decreased beyond 550 μm, the hydration properties were found to decrease during grinding. Interestingly, decreasing particle size during grinding was also shown to increase the fat absorption capacity of the coconut residue 
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0963996900000387"class="button">[2]</a>. </p>
+      <li> <strong>Surface area characteristics </strong>
+      <p>The ability of dietary fiber to undergo fermentation by gut microbiota and its impact on physiological functions can be influenced by several factors such as porosity and available surface area. These factors are determined by the fiber's architectural features, which in turn are related to its origin and processing history. Additionally, the regiochemistry of the fiber's surface layer may also impact certain physiochemical properties such as adsorption or binding of specific molecules, leading to distinct physiological effects. Overall, understanding the interplay between the fiber's architectural properties, surface chemistry, and physiological effects is crucial in elucidating the role of dietary fiber in human health. </p>
+     <li> <strong>Hydration properties </strong></li>
+     <p> The impact of dietary fiber on the digestive tract and its physiological effects are, in part, determined by its hydration properties. The ability of fiber to induce fermentation and its impact on fecal bulking of minimally fermented dietary fiber are influenced by its swelling and water retention capacity. Understanding these properties is essential for the development of fiber-supplemented foods. Additionally, water absorption properties of fiber can provide insights into its substrate pore volume, which is important in understanding the behavior of fiber during gut transit and in food applications. Processing techniques, such as grinding, drying, heating, or extrusion cooking, can alter the physical properties of the fiber matrix and consequently affect its hydration properties. Hence, it is crucial to consider the effects of processing on the hydration properties of fiber to better understand its impact on gut health and to optimize its use in food applications.  <a href="https://books.google.co.in/books?hl=en&lr=&id=9SHjBwAAQBAJ&oi=fnd&pg=PR18&dq=related:-wEw5DFtI4kJ:scholar.google.com/&ots=TylbMoHKm4&sig=5hxNtVCPaMedCPEkYdvQCVidyI8&redir_esc=y#v=onepage&q&f=false"class="button"> [3] </a>.Environmental factors such as temperature, pH, ionic strength, dielectric constant of the surrounding solution, and the nature of ions can significantly impact the hydration characteristics of fiber containing poly-electrolytes. Charged groups, such as carboxyl in fibers that are rich in pectin, or carboxyl and sulfate groups in fibers obtained from algae, can be influenced by these factors. The extent of hydration and the degree of swelling of these fibers may be modified by altering these environmental conditions. Therefore, it is crucial to consider the impact of environmental conditions on fiber hydration characteristics, especially for poly-electrolyte-containing fibers, to better understand their behavior in different physiological and food-related applications.<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jsfa.2740550307,https://www.sciencedirect.com/science/article/abs/pii/0926669094900795"class="button">[4,5]  </a>.</p>
+     
+    
+      
+      
+      
+      
+      </p>
+    <h2>Benefits of a high-fiber diet</h2>
+    <hr>
+    <ul>
+      <p>A high-fiber diet:</p>
+      <li> <strong>Normalizes bowel movements</strong></li>
+      <p>Dietary fiber plays a crucial role in maintaining regular bowel movements by increasing the weight and size of stool while also softening it. This can be particularly helpful in reducing the risk of constipation, as passing a bulky stool is generally easier. On the other hand, if you experience loose or watery stools, fiber can help to solidify them by absorbing excess water and adding bulk to the stool. By promoting healthy bowel movements, fiber can contribute to improved digestive health and overall well-being.</p>
+      <li> <strong>Helps maintain bowel health</strong></li>
+      <p>A diet rich in dietary fiber has been associated with a lower risk of developing conditions such as hemorrhoids and diverticular disease. In addition, evidence suggests that a high-fiber diet may reduce the risk of colorectal cancer. Fermentation of some types of fiber in the colon is being studied to better understand its potential role in preventing colon diseases. Moreover, a high-fiber diet can also improve overall gut health by promoting the growth of beneficial gut bacteria and regulating bowel movements.</p>
+      <li> <strong>Lowers cholesterol levels</strong></li>
+      <p>Soluble fiber, which is found in a variety of plant-based foods such as beans, oats, flaxseed, and oat bran, has been shown to have numerous health benefits. One of these benefits is that it may help lower total blood cholesterol levels by reducing levels of low-density lipoprotein (LDL) cholesterol, commonly referred to as "bad" cholesterol. In addition to cholesterol-lowering effects, high-fiber foods have been linked to other heart-healthy benefits, such as reducing blood pressure and inflammation. Therefore, incorporating fiber-rich foods into your diet can be an effective way to improve overall cardiovascular health.</p>
+      <li> <strong>Helps control blood sugar levels</strong></li>
+      <p> Individuals with diabetes may benefit from including fiber in their diet, particularly soluble fiber, as it can help to slow down the absorption of sugar and improve blood sugar levels. Moreover, consuming a healthy diet that contains insoluble fiber may also lower the risk of developing type 2 diabetes.</p>
+      <li> <strong>Aids in achieving healthy weight</strong></li>
+      <p>Consuming foods that are high in fiber can help you feel fuller for longer periods of time compared to low-fiber foods. This is because high-fiber foods tend to have a greater satiating effect. Additionally, high-fiber foods typically take longer to eat and have a lower energy density, meaning that they contain fewer calories per unit volume of food. By incorporating more high-fiber foods into your diet, you may consume fewer calories while still feeling satisfied, which can be beneficial for weight management and overall health.</p>
+    </ul>
+    <h2>
+        Reference
+    </h2>
+    <hr>
+    <p>
+        <ul>
+            <li>[1]<a href="https://www.netmeds.com/health-library/post/teff-discover-the-incredible-health-benefits-of-this-superfood"class="button">Teff: Discover The Incredible Health Benefits Of This Superfood . </a>   </li>
+            
+            <li>[2]Guillon F, Champ M.(2000) <a href="https://www.sciencedirect.com/science/article/abs/pii/S0963996900000387"class="button">  Structural and physical properties of dietary fibres, and consequences of processing on human physiology.</a> Food Res Int. 33:233–245 . </li>
+            <li>[3]Thibault JF, Lahaye M, Guillon F.(1992) <a href="https://books.google.co.in/books?hl=en&lr=&id=9SHjBwAAQBAJ&oi=fnd&pg=PR18&dq=related:-wEw5DFtI4kJ:scholar.google.com/&ots=TylbMoHKm4&sig=5hxNtVCPaMedCPEkYdvQCVidyI8&redir_esc=y#v=onepage&q&f=false"class="button">  Physiochemical properties of food plant cell walls. In: Schweizer E, Edwards C, editors. Dietary fibre, a component of food.</a> Nutritional function in health and disease, ILSI Europe. Berlin: Springer-verlag. pp. 21–39 </li>
+            <li>[4]Renard CMGC, Crepeau MJ, Thibault JF.<a href="https://www.sciencedirect.com/science/article/abs/pii/0926669094900795"class="button">  Influence of ionic strength, pH and dielectric constant on hydration properties of native and modified fibre from sugar-beet and wheat bran.</a> Ind Crops Prod. 1994;3:75–84. </li>
+            <li>[5]Fleury N, Lahaye M.(1991) <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jsfa.2740550307"class="button">  Chemical and physicochemical characterisation of fibres from Laminaria digitata (Kombu Breton): a physiological approach.</a> J Sci Food Agric. 55:389–400. </li>
+          
+
+        </ul>
+    </p>
+  </p>   
+ 
+</body>
+</html>

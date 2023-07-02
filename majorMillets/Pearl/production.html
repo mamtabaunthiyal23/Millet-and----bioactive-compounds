@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+<style type="text/css">
+
+  /* ============ desktop view ============ */
+  @media all and (min-width: 992px) {
+  
+    .dropdown-menu li{
+      position: relative;
+    }
+    .dropdown-menu .submenu{ 
+      display: none;
+      position: absolute;
+      left:100%; top:-7px;
+    }
+    .dropdown-menu .submenu-left{ 
+      right:100%; left:auto;
+    }
+  
+    .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+    .dropdown-menu > li:hover > .submenu{
+      display: block;
+    }
+  }	
+  /* ============ desktop view .end// ============ */
+  
+  /* ============ small devices ============ */
+  @media (max-width: 991px) {
+  
+  .dropdown-menu .dropdown-menu{
+      margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+  }
+  
+  }	
+  /* ============ small devices .end// ============ */
+  
+  .masthead{
+      background-size: cover;
+      min-height: 100vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    opacity: 80%;
+  }
+  </style>
+  
+  
+  <script type="text/javascript">
+  //	window.addEventListener("resize", function() {
+  //		"use strict"; window.location.reload(); 
+  //	});
+  
+  
+    document.addEventListener("DOMContentLoaded", function(){
+          
+  
+        /////// Prevent closing from click inside dropdown
+      document.querySelectorAll('.dropdown-menu').forEach(function(element){
+        element.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      })
+  
+  
+  
+      // make it as accordion for smaller screens
+      if (window.innerWidth < 992) {
+  
+        // close all inner dropdowns when parent is closed
+        document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+          everydropdown.addEventListener('hidden.bs.dropdown', function () {
+            // after dropdown is hidden, then find all submenus
+              this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                // hide every submenu as well
+                everysubmenu.style.display = 'none';
+              });
+          })
+        });
+        
+        document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+          element.addEventListener('click', function (e) {
+      
+              let nextEl = this.nextElementSibling;
+              if(nextEl && nextEl.classList.contains('submenu')) {	
+                // prevent opening link if link needs to open dropdown
+                e.preventDefault();
+                console.log(nextEl);
+                if(nextEl.style.display == 'block'){
+                  nextEl.style.display = 'none';
+                } else {
+                  nextEl.style.display = 'block';
+                }
+  
+              }
+          });
+        })
+      }
+      // end if innerWidth
+  
+    }); 
+    // DOMContentLoaded  end
+  </script>
+    <title>History </title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+       <a class="navbar-brand" href="/home page .html">Home</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     <div class="collapse navbar-collapse" id="main_nav">
+     
+   
+     <ul class="navbar-nav">
+       
+       <li class="nav-item"><a class="nav-link" href="/About.html"> About </a></li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Millet  </a>
+           <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="/millets/history.html"> History </a></li>
+           
+          
+           <li><a class="dropdown-item" href="/millets/Taxonomy.html"> Taxonomy </a></li>
+           <li><a class="dropdown-item" href="/millets/types of millet.html"> Types </a>
+           <li><a class="dropdown-item" href="/millets/Nutrition.html"> Nutrition </a>
+           <li><a class="dropdown-item" href="/millets/Cultivation.html"> Cultivation </a>
+           <li><a class="dropdown-item" href="/millets/production.html"> Production </a>
+           </ul>
+       </li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Major Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Finger/history finger millet.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/taxonomy finger millet.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/varieties finger millet.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/nutrition finger millet.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/cultivation finger millet.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/production finger millet.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/antioxidant finger millet.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/varieties.html"> varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/production.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/antioxidant.html"> Antioxidant </a>
+   
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/antioxidant.html"> Antioxidant </a>
+           </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Praso/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Minor Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Kudo/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/production.html"> Production </a>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Little/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Little/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/antioxidants.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Teff/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/antioxidant .html"> Antioxidant </a>	
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+       
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Major Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Dietary fibre component..html"> Dietary fiber </a></li>
+            
+            
+                <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Polyphenols.html"> Polyphenols   </a>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/dietary fibre.html"> Dietary fiber  </a>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/polyphenols.html"> Polyphenols </a></li>
+              
+              
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/dietary fibre.html">Dietary fiber </a></li>
+               
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/Polyphenol.html"> Polyphenols </a></li>
+            
+            
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/dietary fibre.html"> Dietary fiber </a> </li>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/Polyphenols.html"> Polyphenols </a></li>
+             
+            
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+  
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Minor Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/Polyphenols.html"> Polyphenol</a></li>
+          
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/Phytochemicals.html"> Polyphenols </a></li>
+          
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/dietary fibre.html"> Dietary fiber </a></li>
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/polyphenols.html"> Polyphenol</a></li>
+                
+                
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/polyphenols.html"> Polyphenols   </a></li>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/dietary fibre.html"> Dietary fiber </a></li>
+              
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/phytochemicals.html"> Polyphenols </a>
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+      <li class="nav-item"><a class="nav-link" href="/team.html"> Team </a></li>
+  
+    </ul>
+   
+     
+   
+     </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+   </nav>
+<body>
+    <body style="background-color:antiquewhite;"></body>
+    
+    <style>
+        p{font-family:Arial, Helvetica, sans-serif;
+        font-size:large;
+        font-style: normal;}
+        
+
+     
+        </style>
+        <h1>Production </h1>
+        <p>Bajra (pearl millet) production in India saw an increase in the financial year 2020-2021 compared to the previous year. According to recent data, the production value of bajra was 10.49 million metric tons in 2020-2021, whereas it was 8.66 million metric tons in 2018-2019. This significant increase in production can be attributed to various factors such as favorable weather conditions, improved farming practices, and technological advancements in agriculture. It is a positive development for the agricultural sector in India and bodes well for the country's food security and economy. </p>
+
+           <h3>Value added products :-</h3>
+           <hr>
+        <ul>
+            <h4> 1.Puffs :- </h4>
+            <p>Pearl millet puffs are a type of ready-to-eat snack that is produced through explosive or gun puffing, which results in the foxtail grain expanding to its maximum expansion potential while maintaining the grain's identity and shape. The puffs are made using a puff gun machine that is loaded with dehulled foxtail grain and roasted for firing, resulting in a crispy, white product that is similar in texture to puffed rice.
+
+                The foxtail puffs have a high yield of 92%, with a by-product yield of 82% consisting of small puffs and unpuffed grains. They are rich in protein and fiber, making them a healthy snack option. The puffs come in two variants: masala-coated and fried.
+                
+                The product has a shelf life of 2 months when packed in air-tight MET pouches at ambient temperatures. Ongoing studies are being conducted to determine the product's shelf life under different storage conditions.
+                
+                Pearl millet puffs make for a great inflight or evening snack. They are easy to consume and can be a healthy alternative to other snack options.</p>
+        </ul> 
+        <p><img src="https://srifoodsindia.com/wp-content/uploads/2019/11/puffs-bajra.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Puffed Bajra/Pearl Millet – Shri Foods India" data-noaft="1" style="width: 387px; height: 387px; margin: 0px;"></p>
+        <h4>2.Chapati </h4>
+        <p>Pearl millet chapati is a nutritious and delicious flatbread that can be enjoyed as a healthy breakfast or as a light evening meal. This gluten-free flatbread is high in protein and minerals, making it a great addition to a well-balanced diet. What's more, foxtail millet chapati is an excellent source of dietary fiber, which can help keep you feeling full and satisfied for longer periods of time.
+
+            Unlike wheat-based flatbreads, foxtail millet chapati is low in carbohydrates and calories, making it an ideal choice for those who are watching their weight. This makes it a healthier option for individuals looking for a low-carb alternative to traditional wheat-based flatbreads. Additionally, the high fiber content of foxtail millet chapati may help regulate blood sugar levels, making it a smart choice for people with diabetes.
+            
+            Overall, pearl millet chapati is a nutritious and satisfying flatbread that offers a range of health benefits. It is a great option for those who want to add more fiber and protein to their diet while still enjoying delicious, healthy food.
+            
+            
+            
+            
+
+
+            
+
+           </p>
+           <P><img src="https://static.toiimg.com/thumb/54691564.cms?imgsize=109501&amp;width=800&amp;height=800" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 800px; height: 415px; margin: 0px; width: 415px;" alt="Bajra Roti Recipe: How to Make Bajra Roti Recipe | Homemade Bajra Roti  Recipe" jsname="kn3ccd" aria-hidden="false"></P>
+            <h4> 3.Pasta :- </h4>
+            <p>Pasta is a popular dish that can be prepared using a variety of techniques. One such technique is cold extrusion, which has gained acceptance as an effective and cost-efficient method for continuous pasta processing in recent years.
+
+                To prepare pasta using cold extrusion, pearl millet semolina and refined wheat semolina are typically mixed together in the vermicelli-making machine's mixing compartment. To achieve the right consistency, the mixture is then combined with water and blended for approximately 30 minutes. The resulting dough is then extruded through a pasta die to create the desired pasta shape.
+                
+                It is important to note that pearl millet has a lower gluten content than wheat, which means that a minimum percentage of wheat is required for preparing pasta. Therefore, wheat is added to the mixture to ensure that the pasta has the necessary gluten content and desired texture.</p>
+                <p><img src="https://feelnatural.in/wp-content/uploads/2020/12/Pearl-Millet-pasta-1.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Pearl Millet Pasta 180g – Feel Natural Online Organic Store" data-noaft="1" style="width: 387px; height: 387px; margin: 0px;"></p>
+                <h4>4.Bakery Products </h4>
+                <p>In today's fast-paced world, people have less time to devote to preparing breakfast, which has led to a rise in demand for quick and convenient bakery products such as cookies, bread, buns, and cakes. However, consumers are increasingly focused on maintaining a healthy lifestyle and are seeking out healthier alternatives to traditional baked goods. Millet-based bakery foods have emerged as a popular option in this regard.
+
+                    To meet the growing demand for healthier bakery products, the Indian Institute of Millets Research (IIMR) has conducted research to develop millet-based ready-to-eat (RTE) bakery foods. The research involved incorporating millets in various proportions, ranging from 10% to 50%, to standardize the production of cookies (100%), bread/buns (50%), and cakes (100%). Millet flour was used to replace refined wheat flour or used in conjunction with it to achieve the desired consistency and nutritional profile.
+                    
+                    Given the current demand for convenient and healthy food options, it is essential to develop bakery foods that meet these needs. The research carried out by IIMR is an important step in this direction, and millet-based RTE bakery foods offer a promising alternative to traditional baked goods.
+                    
+                    
+                    
+                    
+                    </p>
+                    <h5>(A) Cookies:- </h5>
+                    <p>Cookies are a widely popular and convenient ready-to-eat product that is enjoyed by people of all ages. At the Indian Institute of Millets Research (IIMR), cookies made from 100% millets have been developed using a combination of state-of-the-art equipment, including a planetary mixer, automatic cookie-making machine, and rotary oven.
+
+                        To prepare these millet-based cookies, the IIMR team used high-quality pearl millet flour as the main ingredient. They then added other essential components such as sugar, milk solids, trans-free fat, salt, and nature-identical flavoring substances to achieve the desired taste and texture.
+                        
+                        By using 100% millet flour and avoiding refined wheat flour, the IIMR team was able to create cookies that are not only delicious but also more nutritious. Millets are a rich source of vitamins, minerals, and dietary fiber, making them an ideal choice for those seeking healthier food options.
+                        
+                        Overall, the development of millet-based cookies by IIMR represents an important step towards creating more healthy and sustainable food choices for consumers, and provides a tasty alternative to traditional wheat-based cookies.
+                        
+                        
+                        
+                         </p>
+                        <p><img src="https://rakskitchen.net/wp-content/uploads/2017/02/millet-cookies-recipe.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Millet cookies recipe, bajra cookies - Raks Kitchen" data-noaft="1" style="width: 309.6px; height: 387px; margin: 0px;"></p>
+                        <h5> (B) Bread </h5>
+                        <p>
+                            Bread is a popular ready-to-eat (RTE) product that is typically made by mixing flour, water, fat, salt, and yeast to create a dough, which is then baked into a loaf. At the Indian Institute of Millets Research (IIMR), millet bread has been developed as a healthier alternative to traditional wheat-based bread.
+
+To make millet bread, IIMR researchers replaced 50% of the wheat in the bread recipe with pearl millet flour in varying proportions. In addition to the millet flour, the researchers used superior quality yeast, trans-free fat, salt, and sugar to create a tasty and nutritious bread product.
+
+Millet bread is a healthier option for consumers as it contains higher levels of nutrients, including vitamins, minerals, and dietary fiber, compared to traditional wheat bread. By incorporating millet flour in the bread recipe, IIMR has created a product that is not only delicious but also more nutritious, providing a much-needed alternative to conventional bread products.
+
+Overall, the development of millet bread by IIMR is a significant step in promoting healthier and more sustainable food options for consumers. Millet-based products offer an exciting opportunity to diversify the food market, while providing a range of health benefits that are essential for maintaining a balanced diet.
+
+
+
+
+                            </p>
+                            <p><img src="https://5.imimg.com/data5/LW/VN/FJ/SELLER-11493222/bajra-pearl-millet-bread-500x500.png" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Bajra (Pearl Millet) Bread at Rs 110/kg | Pearl Millets in New Delhi | ID:  20844254233" data-noaft="1" style="width: 387px; height: 387px; margin: 0px;"></p>
+                            <h5>(C) Cake :-  </h5>
+                            <p>Cakes are a popular ready-to-eat (RTE) product that is made by combining flour, sugar, fat, eggs, and flavoring ingredients to create a dough, which is then baked. At the Indian Institute of Millets Research (IIMR), millet cakes have been developed as a healthier alternative to traditional wheat-based cakes.
+
+                                IIMR has used 100% foxtail millet flour to make millet cakes, along with superior quality fat, sugar, eggs, and chocolate/vanilla essence. The researchers also experimented with different types of millets in varying proportions to find the best recipe. Among all the cakes made, the finger millet cake was found to be the most acceptable in terms of taste and texture.
+                                
+                                Millet-based cakes offer several advantages over conventional wheat-based cakes. Millets are a rich source of dietary fiber, minerals, and vitamins, making them an ideal choice for those seeking healthier food options. By using millet flour instead of refined wheat flour, IIMR has created a cake that is not only delicious but also more nutritious.
+                                
+                                Overall, the development of millet cakes by IIMR is a significant step in promoting healthier and more sustainable food choices for consumers. By incorporating millets into RTE products such as cakes, we can provide a range of health benefits that are essential for maintaining a balanced diet.
+                                
+                                
+                                
+                                </p>
+                                <p><img src="https://2.bp.blogspot.com/-ihA2wRVh9nc/WHz8_k_sduI/AAAAAAAAKnc/eHlQA4l6jGkBlm7YyYmHQxJLjUgJ0SPiQCEw/s1600/Kambu%2BChocolate%2BCake%2B%25283%2529.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Kambu Chocolate Cake | Pearl Millet Chocolate Cake | Bajra Chocolate Cake ~  Full Scoops - A food blog with easy,simple &amp; tasty recipes!" data-noaft="1" style="width: 415px; height: 276.667px; margin: 0px;"></p>
+                                <h2>Reference</h2> 
+                                <p>
+                                 <ul>
+                                     <li> [1] P. Sanjana Reddy, C. Tara Satyavathi, Vikas Khandelwal, H. T. Patil, P. C. Gupta, L. D. Sharma, K. D. Mungra, Sumer P. Singh, R. Narasimhulu, H. H. Bhadarge, K. Iyanar, M. K. Tripathi, Devvart Yadav, Ruchika Bhardwaj, A. M. Talwar, V. K. Tiwari, U. G. Kachole, K. Sravanti, M. Shanthi Priya, B. K. Athoni, N. Anuradha, Mahalingam Govindaraj, T. Nepolean1 and Vilas A. Tonapi(2021)<a href="https://www.frontiersin.org/articles/10.3389/fpls.2021.670201/full"> Performance and Stability of Pearl Millet Varieties for Grain Yield and Micronutrients in Arid and Semi-Arid Regions of India </a>Front. Plant Sci., 
+                                      Sec. Plant Breeding
+                                      Volume 12 - 2021 | https://doi.org/10.3389/fpls.2021.670201</li>
+                                     <li>[2] <a href="http://www.aicpmip.res.in/aboutus.html"> Production of Pearl millet  </a></li>
+                                     <li>[3] <a href="http://agropedia.iitk.ac.in/content/area-and-distribution-pearl-millet">Area and Distribution of Pearl Millet </a></li>
+                                     <li> [4]<a href="https://www.statista.com/statistics/1286469/india-production-of-bajra/"> Production of bajra, or pearl millet, in India from financial years 2016 to 2021(in million metric tons)</a></li>
+                                     <li>[5] <a href="https://www.ijcmas.com/8-8-2019/K.K.%20Kundu,%20et%20al.pdf">Production and Marketing Patterns of Pearl Millet
+                                        in India with Special Reference to Haryana
+                                         </a></li>
+                                     
+                                     <li>[6]Atikah Nor Johari,Bhavik Mehta,Priyanka,A. Kawatra
+
+                                      <a href="https://www.researchgate.net/publication/290449653_Value_addition_of_pearl_millet#:~:text=Various%20value%2Dadded%20products%20can,biscuits%20with%20good%20organoleptic%20characteristics.">Value added products from Pearl millet  </a>Researchgate. </li>
+                                     <li>[7] <a href="https://www.millets.res.in/technologies/Technologies_of_millet_value_added_products.pdf">TECHNOLOGIES OF MILLET VALUE ADDED PRODUCTS </a></li>
+                                     
+                                 </ul>
+                                </p> 
+                                
+</body>
+</html>

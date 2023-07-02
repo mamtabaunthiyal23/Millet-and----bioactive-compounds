@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+<style type="text/css">
+
+  /* ============ desktop view ============ */
+  @media all and (min-width: 992px) {
+  
+    .dropdown-menu li{
+      position: relative;
+    }
+    .dropdown-menu .submenu{ 
+      display: none;
+      position: absolute;
+      left:100%; top:-7px;
+    }
+    .dropdown-menu .submenu-left{ 
+      right:100%; left:auto;
+    }
+  
+    .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+    .dropdown-menu > li:hover > .submenu{
+      display: block;
+    }
+  }	
+  /* ============ desktop view .end// ============ */
+  
+  /* ============ small devices ============ */
+  @media (max-width: 991px) {
+  
+  .dropdown-menu .dropdown-menu{
+      margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+  }
+  
+  }	
+  /* ============ small devices .end// ============ */
+  
+  .masthead{
+      background-size: cover;
+      min-height: 100vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    opacity: 80%;
+  }
+  </style>
+  
+  
+  <script type="text/javascript">
+  //	window.addEventListener("resize", function() {
+  //		"use strict"; window.location.reload(); 
+  //	});
+  
+  
+    document.addEventListener("DOMContentLoaded", function(){
+          
+  
+        /////// Prevent closing from click inside dropdown
+      document.querySelectorAll('.dropdown-menu').forEach(function(element){
+        element.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      })
+  
+  
+  
+      // make it as accordion for smaller screens
+      if (window.innerWidth < 992) {
+  
+        // close all inner dropdowns when parent is closed
+        document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+          everydropdown.addEventListener('hidden.bs.dropdown', function () {
+            // after dropdown is hidden, then find all submenus
+              this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                // hide every submenu as well
+                everysubmenu.style.display = 'none';
+              });
+          })
+        });
+        
+        document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+          element.addEventListener('click', function (e) {
+      
+              let nextEl = this.nextElementSibling;
+              if(nextEl && nextEl.classList.contains('submenu')) {	
+                // prevent opening link if link needs to open dropdown
+                e.preventDefault();
+                console.log(nextEl);
+                if(nextEl.style.display == 'block'){
+                  nextEl.style.display = 'none';
+                } else {
+                  nextEl.style.display = 'block';
+                }
+  
+              }
+          });
+        })
+      }
+      // end if innerWidth
+  
+    }); 
+    // DOMContentLoaded  end
+  </script>
+    <title>History </title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+       <a class="navbar-brand" href="/home page .html">Home</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     <div class="collapse navbar-collapse" id="main_nav">
+     
+   
+     <ul class="navbar-nav">
+       
+       <li class="nav-item"><a class="nav-link" href="/About.html"> About </a></li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Millet  </a>
+           <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="/millets/history.html"> History </a></li>
+           
+          
+           <li><a class="dropdown-item" href="/millets/Taxonomy.html"> Taxonomy </a></li>
+           <li><a class="dropdown-item" href="/millets/types of millet.html"> Types </a>
+           <li><a class="dropdown-item" href="/millets/Nutrition.html"> Nutrition </a>
+           <li><a class="dropdown-item" href="/millets/Cultivation.html"> Cultivation </a>
+           <li><a class="dropdown-item" href="/millets/production.html"> Production </a>
+           </ul>
+       </li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Major Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Finger/history finger millet.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/taxonomy finger millet.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/varieties finger millet.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/nutrition finger millet.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/cultivation finger millet.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/production finger millet.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/antioxidant finger millet.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/varieties.html"> varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/production.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/antioxidant.html"> Antioxidant </a>
+   
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/antioxidant.html"> Antioxidant </a>
+           </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Praso/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Minor Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Kudo/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/production.html"> Production </a>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Little/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Little/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/antioxidants.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Teff/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/antioxidant .html"> Antioxidant </a>	
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+
+       
+
+       
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Major Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Dietary fibre component..html"> Dietary fiber </a></li>
+            
+            
+                <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Polyphenols.html"> Polyphenols   </a>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/dietary fibre.html"> Dietary fiber  </a>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/polyphenols.html"> Polyphenols </a></li>
+              
+              
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/dietary fibre.html">Dietary fiber </a></li>
+               
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/Polyphenol.html"> Polyphenols </a></li>
+            
+            
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/dietary fibre.html"> Dietary fiber </a> </li>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/Polyphenols.html"> Polyphenols </a></li>
+             
+            
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+  
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Minor Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/Polyphenols.html"> Polyphenol</a></li>
+          
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/Phytochemicals.html"> Polyphenols </a></li>
+          
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/dietary fibre.html"> Dietary fiber </a></li>
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/polyphenols.html"> Polyphenol</a></li>
+                
+                
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/polyphenols.html"> Polyphenols   </a></li>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/dietary fibre.html"> Dietary fiber </a></li>
+              
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/phytochemicals.html"> Polyphenols </a>
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+      <li class="nav-item"><a class="nav-link" href="/team.html"> Team </a></li>
+  
+    </ul>
+   
+     
+   
+     </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+   </nav>
+<body>
+    <body style="background-color:antiquewhite;"></body>
+    <h2> Salient features of released varieties of finger millet crops (1991 to 2011 ) 
+    </h2>
+    <hr>
+    <style>
+        table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+    
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+    background-color:snow;
+    }
+        
+    </style>
+    <table>
+    <tr>
+        <th>
+            Sl.No.
+            
+            
+    
+        </th>
+        <th> Name of crop </th>
+        
+       
+        <th>Institute where developed</th>
+        <th>Year of release </th>
+       
+            <th>Area of adaptation </th>
+            <th>Special features</th>
+
+    </tr>
+    
+    
+
+   
+   
+                
+    
+    
+    
+    
+    
+    <tr>
+        <td>1</td>
+        <td>VL149</td>
+       
+        <td>VPKAS, 
+            Almora
+            </td>
+            <td>1991</td>
+            
+            <td>All states in india </td>
+            <td>Wide adaptation, earlines</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Indaf 15</td>
+        
+        <td>V.C.farm mandya UAS, bangalore
+            </td>
+            <td>1991</td>
+           
+            <td>Karnataka</td>
+            <td>Long duration</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>padmavathi (PPR2350)</td>
+       
+        <td>
+            ANGRAU
+            ,perumallapalle(AP)
+            
+            
+            </td>
+            <td>1993</td>
+            
+            <td>Coastal andhra pradesh</td>
+            <td>
+                Suitable for late kharif 
+                
+                </td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>GN3</td>
+       
+        <td>
+            GAU, gujrat 
+            
+            </td>
+            <td>1993</td>
+            
+            <td>Gujrat</td>
+            <td>Tolerant to drought long duration</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>
+            Gautami 
+            (PR1158-9)
+            
+            </td>
+        
+        <td>
+            MRS,vizianagaram
+            
+            </td>
+            <td>1993</td>
+            
+            <td>Andhrapradesh</td>
+            <td>Tolerance to blast high yield</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>A404
+        
+            
+            </td>
+       
+        <td>
+            BAU,ranchi
+            
+            </td>
+            <td>1993</td>
+           
+            <td>Bihar</td>
+            <td>Moderately resistant to blast</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>KM 65
+        
+            
+            </td>
+        
+            
+        <td>
+            CSAUA&T , kanpur </td>
+            
+            
+            <td>1994</td>
+           
+            <td>Uttarpradesh</td>
+            <td>Early maturity resistant to blast</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>Suraj ( VR520)
+        
+            
+            </td>
+        
+            
+        <td>
+            
+ANGRAU,vizianagaram(AP)
+
+</td>
+            
+            
+            <td>1994</td>
+            
+            <td>All over india</td>
+            <td>
+                Early maturity, resistant to blast and tolerant to drought 
+                
+                </td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>Dapoli 1</td>
+       
+            <td>
+                KVK,Dapoli
+                
+                </td>
+                <td>1994</td>
+               
+                <td>
+                    Konkan regions of maharashtra
+                    
+                    </td>
+                    <td>Early maturity</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>saptagiri(PR2614)</td>
+        
+            <td>
+                APAU,perumallapalle
+                
+                </td>
+                <td>1995</td>
+                
+                <td>
+                    Tamilnadu,maharashtra,odisha,andhra pradesh 
+                    
+                    </td>
+                    <td>
+                        Resistant  to blast and tolerant to drought 
+                        
+                        </td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>BM2 </td>
+        
+        <td>
+            BAU,ranchi 
+            
+            </td>
+            <td>1995</td>
+           
+            <td>Bihar</td>
+            <td>Resistant to neck and finger blast</td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>VL -146 </td>
+        
+        <td>
+            VPKAS, almora
+            
+            </td>
+            <td>1995</td>
+            
+            <td>uttarpradesh , jharkhand , odisha, uttarakhand ,maharashtra,madhya pradesh and karnataka</td>
+            <td>Early maturity</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>GPU28</td>
+        
+            <td>
+                PC unit, banglore
+                
+                </td>
+                <td>1996</td>
+                
+                <td>
+                    karnataka
+                    
+                    </td>
+                    <td>Highly blast resistant </td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>PR230(maruthi )</td>
+        
+            <td>
+                ANGRAU,Paleru
+                
+                </td>
+                <td>1998</td>
+                
+                <td>
+                    andhrapradesh(telangana region)
+                    
+                    </td>
+                    <td>Resistant to blast and blight </td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>MR1</td>
+        
+        <td>
+            V.C.farm mandya UAS, banglore 
+            
+            </td>
+            <td>1998</td>
+            
+            <td>
+                karnataka
+                
+                </td>
+                <td>Long duration for early sowings</td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>Champavathi</td>
+       
+        <td>ANGRAU,ARS vizianagaram</td>
+        <td>1998</td>
+       
+           
+            <td>Andhra pradesh,uttarpradesh,tamilnadu,karnataka,odisha</td>
+            <td>Photo insensitive and early maturity</td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td>L-5</td>
+        
+        <td>UAS, banglore</td>
+        <td>1999</td>
+        
+            <td>Karnataka</td>
+            <td>Late variety, for early maturity</td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td>BM9-1</td>
+        
+        <td>OUAT,berhampur</td>
+        <td>1999</td>
+       
+            <td>karnatka , andhra pradesh, odisha, madhya pradesh and maharashtra </td>
+            <td>Moderately resistant to blast and brown spot</td>
+    </tr>
+    <tr>
+        <td>19</td>
+        <td>GPU 26</td>
+       
+        <td>PC unit,UAS,bangalore</td>
+        <td>2000</td>
+       
+            <td>karnatka  </td>
+            <td>early , blast tolerant, suitable late sowings and summer</td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>chilika (OEB 10)</td>
+        
+        <td>OUAT, bhubaneshwar</td>
+        <td>2001</td>
+        
+            <td>odisha,madhyapradesh,gujarat , andhra pradesh, tamilnadu </td>
+            <td>Moderately resistant to blast, resistant to stem borer, late variety </td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>GPU45</td>
+       
+            <td>
+                PC unit, UAS,banglore 
+                
+                </td>
+                <td>2001</td>
+                
+                <td>Gujarat,jharkhand, karnataka,madhya pradesh ,maharashtra</td>
+                <td>early , blast resistant</td>
+
+    </tr>
+    <tr>
+        <td>22</td>
+        <td>VL315</td>
+       
+            <td>
+                VPKAS, Almora
+                
+                </td>
+                <td>2004</td>
+                
+                <td>Uttranchal </td>
+                <td>Moderately resistant to finger and neck blast</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>TNAU 946</td>
+                  
+                    <td>TNAU,coimbatore</td>
+                    <td>2004</td>
+                    
+                        <td>Tamilnadu</td>
+                        <td></td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>GPU 48
+                    </td>
+                    
+                    <td>PC unit, bengaluru</td>
+                    <td>2005</td>
+                   
+                    <td>karnataka</td>
+                    <td>Pigmentation on all plant parts and highly resistant to blast </td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>GPU48</td>
+                    
+                    <td>PC unit,banglore</td>
+                    <td>2005</td>
+                    
+                    <td>karnataka</td>
+                    <td>Early , high yield , blast resistant suitable for summer also</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Bharathi (VR762)</td>
+                    
+                    <td>ANGRAU, vizianagaram</td>
+                    <td>2006</td>
+                   
+                    <td>andhrapradesh</td>
+                    <td>Moderately resistant to blast</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>PRM1</td>
+                    
+                    <td>Hill campus,GBPUA&T, ranichauri </td>
+                    <td>2006</td>
+                   
+                    <td>Hills of uttarakhand</td>
+                    <td>Resistant to blast </td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>KMR 301</td>
+                    
+                    <td>VC farm ,mandyaUAS bengaluru</td>
+                    <td>2009</td>
+                    
+                    <td>Southern dry zone of karnataka</td>
+                    <td>
+                        High grain and straw yield, tolerant to blast
+                        
+                         </td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Srichaitanya (VR 847)</td>
+                   
+                    <td>ANGRAU, vizianagaram</td>
+                    <td>2009</td>
+                    
+                    <td>Andhra pradesh</td>
+                    <td>
+                        Moderately resistant to blast
+                        
+                         </td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>GPU67</td>
+                    
+                    <td>PC unit , bengaluru</td>
+                    <td>2009</td>
+                    
+                    <td>national</td>
+                    <td>
+                        Non-lodging (semi dwarf)
+                        
+                         </td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>GPU66</td>
+                   
+                    <td>PC unit , bengaluru</td>
+                    <td>2009</td>
+                    
+                    <td>Karnataka</td>
+                    <td>Green plant parts with narrow leaves , medium compact ears with tip incurved finger</td>
+
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>OEB 526</td>
+                   
+                    <td>OAUT, bhubaneswar </td>
+                    <td>2011</td>
+                   
+                    <td>Odisha,bihar ,chattisgarh,karnataka, tamilnadu</td>
+                    <td>Moderately resistant to leaf , neck and finger blast disease</td>
+                </tr>
+
+                
+    </table>
+
+    <h2>Reference</h2>
+    <hr>
+    <p>
+        <ul>
+            <li>[1]<a href="https://angrau.ac.in/downloads/CropVarities/Finger%20Millet.pdf"class="button"> Varieties of finger millet  </a></li>
+            <li>[2]<a href="https://www.millets.res.in/technologies/finger_millets_varieties.pdf"class="button">SALIENT FEATURES OF RELEASED VARIETIES OF FINGER MILLET CROPS (1986 TO 2016)
+            </a></li>
+            <li>[3]<a href="http://www.nutricereals.dac.gov.in/fingermillet.aspx"class="button">State-wise varieties released and popular varieties of finger millet </a></li>
+            <li>[4]<a href="https://www.apnikheti.com/en/pn/agriculture/crops/fodder/finger-millet"class="button">POPULAR VARIETIES WITH THEIR YIELD </a></li>
+            <li>[5]<a href="https://krishijagran.com/agripedia/ragi-cultivation-guide-best-varieties-sowing-process-pest-control-harvesting-and-much-more/"class="button">Enhanced Finger Millet Varieties in India  </a></li>
+            
+        </ul>
+    </p>
+   
+</body>
+</html>

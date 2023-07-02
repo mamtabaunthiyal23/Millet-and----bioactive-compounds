@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production of little millet </title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+<style type="text/css">
+
+  /* ============ desktop view ============ */
+  @media all and (min-width: 992px) {
+  
+    .dropdown-menu li{
+      position: relative;
+    }
+    .dropdown-menu .submenu{ 
+      display: none;
+      position: absolute;
+      left:100%; top:-7px;
+    }
+    .dropdown-menu .submenu-left{ 
+      right:100%; left:auto;
+    }
+  
+    .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+    .dropdown-menu > li:hover > .submenu{
+      display: block;
+    }
+  }	
+  /* ============ desktop view .end// ============ */
+  
+  /* ============ small devices ============ */
+  @media (max-width: 991px) {
+  
+  .dropdown-menu .dropdown-menu{
+      margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+  }
+  
+  }	
+  /* ============ small devices .end// ============ */
+  
+  .masthead{
+      background-size: cover;
+      min-height: 100vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    opacity: 80%;
+  }
+  </style>
+  
+  
+  <script type="text/javascript">
+  //	window.addEventListener("resize", function() {
+  //		"use strict"; window.location.reload(); 
+  //	});
+  
+  
+    document.addEventListener("DOMContentLoaded", function(){
+          
+  
+        /////// Prevent closing from click inside dropdown
+      document.querySelectorAll('.dropdown-menu').forEach(function(element){
+        element.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      })
+  
+  
+  
+      // make it as accordion for smaller screens
+      if (window.innerWidth < 992) {
+  
+        // close all inner dropdowns when parent is closed
+        document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+          everydropdown.addEventListener('hidden.bs.dropdown', function () {
+            // after dropdown is hidden, then find all submenus
+              this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                // hide every submenu as well
+                everysubmenu.style.display = 'none';
+              });
+          })
+        });
+        
+        document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+          element.addEventListener('click', function (e) {
+      
+              let nextEl = this.nextElementSibling;
+              if(nextEl && nextEl.classList.contains('submenu')) {	
+                // prevent opening link if link needs to open dropdown
+                e.preventDefault();
+                console.log(nextEl);
+                if(nextEl.style.display == 'block'){
+                  nextEl.style.display = 'none';
+                } else {
+                  nextEl.style.display = 'block';
+                }
+  
+              }
+          });
+        })
+      }
+      // end if innerWidth
+  
+    }); 
+    // DOMContentLoaded  end
+  </script>
+    <title>History </title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+       <a class="navbar-brand" href="/home page .html">Home</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     <div class="collapse navbar-collapse" id="main_nav">
+     
+   
+     <ul class="navbar-nav">
+       
+       <li class="nav-item"><a class="nav-link" href="/About.html"> About </a></li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Millet  </a>
+           <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="/millets/history.html"> History </a></li>
+           
+          
+           <li><a class="dropdown-item" href="/millets/Taxonomy.html"> Taxonomy </a></li>
+           <li><a class="dropdown-item" href="/millets/types of millet.html"> Types </a>
+           <li><a class="dropdown-item" href="/millets/Nutrition.html"> Nutrition </a>
+           <li><a class="dropdown-item" href="/millets/Cultivation.html"> Cultivation </a>
+           <li><a class="dropdown-item" href="/millets/production.html"> Production </a>
+           </ul>
+       </li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Major Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Finger/history finger millet.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/taxonomy finger millet.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/varieties finger millet.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/nutrition finger millet.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/cultivation finger millet.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/production finger millet.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/antioxidant finger millet.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/varieties.html"> varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/production.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/antioxidant.html"> Antioxidant </a>
+   
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/antioxidant.html"> Antioxidant </a>
+           </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Praso/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Minor Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Kudo/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/production.html"> Production </a>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Little/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Little/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/antioxidants.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Teff/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/antioxidant .html"> Antioxidant </a>	
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+    
+       
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Major Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Dietary fibre component..html"> Dietary fiber </a></li>
+            
+            
+                <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Polyphenols.html"> Polyphenols   </a>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/dietary fibre.html"> Dietary fiber  </a>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/polyphenols.html"> Polyphenols </a></li>
+              
+              
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/dietary fibre.html">Dietary fiber </a></li>
+               
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/Polyphenol.html"> Polyphenols </a></li>
+            
+            
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/dietary fibre.html"> Dietary fiber </a> </li>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/Polyphenols.html"> Polyphenols </a></li>
+             
+            
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+  
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Minor Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/Polyphenols.html"> Polyphenol</a></li>
+          
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/Phytochemicals.html"> Polyphenols </a></li>
+          
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/dietary fibre.html"> Dietary fiber </a></li>
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/polyphenols.html"> Polyphenol</a></li>
+                
+                
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/polyphenols.html"> Polyphenols   </a></li>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/dietary fibre.html"> Dietary fiber </a></li>
+              
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/phytochemicals.html"> Polyphenols </a>
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+      <li class="nav-item"><a class="nav-link" href="/team.html"> Team </a></li>
+  
+    </ul>
+   
+     
+   
+     </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+   </nav>
+<body>
+    <body style="background-color:antiquewhite;"></body> 
+<body>
+    
+    <style>
+        p{font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+        font-style: normal;}
+        </style>
+        <h1>Production</h1>
+        <hr>
+      <p>  Little millet is an important crop in India, cultivated over an area of 2.34 lakh hectares and producing approximately 1.27 lakh tonnes of grain in 2015-16, with a productivity of 544 kg/ha. The crop is mainly grown in states such as Orissa, Gujarat, Maharashtra, Karnataka, Andhra Pradesh, and Madhya Pradesh.
+
+        Despite its importance, little millet production faces several challenges. Many farmers do not adopt improved production technologies, use improved varieties, or follow recommended agronomic and plant protection measures. These constraints contribute to lower productivity and production levels.
+        
+        To increase little millet production and productivity, it is necessary to promote the adoption of improved technologies and practices among farmers. This includes the use of high-quality seeds, appropriate fertilization, water management practices, and integrated pest and disease management strategies. Through these efforts, farmers can overcome production challenges and improve their little millet yields, contributing to food security and economic growth in the region.</p>
+    <h2>Value  added products </h2>
+    <p>Millets have been a fundamental part of human diets for centuries, being one of the earliest cereal grains used for domestic purposes. They are highly valued crops in India and are a staple diet for nearly 1/3rd of the world's population. Millets are versatile crops that can thrive in marginal soils and varied environmental conditions. The category of small millets extends beyond finger millet (Eleusine coracana) and includes kodo millet (Paspalum scrobiculatumi), little millet (Panicum sumatrense), foxtail millet (Setaria italic), proso millet (Panicum miliaceum), and barnyard millet (Echinochloa frumentaceae). Millets are commonly available in the form of pearled and hulled varieties, and they possess a mildly sweet, nut-like flavor. When compared to rice, millets are rich sources of protein, dietary fiber, energy, and minerals. Despite their high food value, consumption of millets has declined due to a lack of standardized processing techniques to compete with fine cereals. To increase the utilization of small millets in popular foods and promote them as "HEALTH FOODS," efforts have been made to develop and standardize little millet-based value-added products, including traditional recipes, bakery products, pasta products, flaked and popped products, and instant food mixes. These small millet-based products have replaced commonly prepared cereals among farmers to increase their utilization.
+
+
+
+
+    </p>
+        <ul>
+            <li> <strong>[1] Vermicelli :- </strong></li>
+        </ul>
+        <p>The popularity of pasta meals, such as vermicelli, noodles, and macaroni, spans across generations due to their delicious taste, convenience, and affordability. While these dishes may be enjoyed on their own, they also serve as an excellent base for creating nutritious and satisfying meals. Pairing pasta with fiber-rich vegetables, beans, heart-healthy fish, monounsaturated oils, antioxidant-packed tomato sauce, and protein-rich cheese, eggs, poultry, or lean meats can enhance its nutritional value.
+
+            To make small millets a more competitive option to traditional cereal foods, it is necessary to develop preprocessed or alternative millet-based products. To this end, we have created vermicelli, noodles, and macaroni using a blend of refined wheat flour and small millets at 30% incorporation levels. By incorporating small millets, we hope to increase the nutrient density of these popular pasta dishes, while also promoting the use of alternative and sustainable grains in our diets.</p>
+            <p><img src="https://cdn.shopify.com/s/files/1/0014/6273/0863/products/PicsArt_05-10-03.29.49_530x@2x.jpg?v=1620641233" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Samai Pasta /Little Millet Pasta – Viha Online" data-noaft="1" style="width: 415px; height: 372.717px; margin: 0px;"></p>
+
+            <ul>
+                <li> <strong>[2] Fermented food </strong></li>
+            </ul>
+            <p>Dosa and Idli are popular fermented foods consumed throughout many regions of India, often enjoyed as breakfast or evening meals. Little millet is a widely used ingredient in these dishes, adding not only to the flavor but also enriching their nutritional value with protein, calcium, and fiber. Additionally, sprouted little millet grains or malted grains may be used in fermented foods to further enhance their taste and texture, depending on personal preference.
+
+                By incorporating little millet into these traditional fermented dishes, we can promote the use of alternative and sustainable grains in our diets while also increasing the nutrient density of our meals. With its numerous health benefits, little millet serves as an excellent choice for individuals seeking to add more nutritious and delicious options to their diets.</p>
+                <p><img src="https://www.spiceindiaonline.com/wp-content/uploads/2017/04/Samai-Idli-dosai.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Little Millet Idli Dosa - Samai Arisi Idli Dosai - Millet Recipes —  Spiceindiaonline" data-noaft="1" style="width: 307.665px; height: 387px; margin: 0px;"></p>
+
+                <ul>
+                    <li>[3] <strong>Bakery products</strong></li>
+                </ul>
+                <p>Bakery products are a beloved treat for people of all ages, prized for their delicious taste, vibrant colors, and easy-to-digest nature. They are an essential part of any celebration, be it a birthday, anniversary, or any other special occasion. In today's fast-paced world, individuals often have little time to spend on preparing breakfast, with bread, buns, biscuits, and other bakery products replacing more time-consuming options. These products are a convenient snack and widely available, making them a popular choice for people on the go.
+
+                    To promote the use of alternative and sustainable grains in bakery products, we have incorporated small millets at various levels ranging from 10% to 50% in standardizing bread (20%), cake (30%), cookies (50%), soup sticks (20%), and khari (40%), replacing refined wheat flour. By including small millets in these baked goods, we aim to enhance their nutritional value, incorporating the many health benefits of these grains, while also offering a variety of unique and delicious flavors.</p>
+                    <p><img src="https://www.standardcoldpressedoil.com/media/catalog/product/cache/818eaf4fe91690f14907bbe1ba289f94/l/i/little-millet-cookies-made-from-little-millet-flour-wheat-flour-unrefined-cane-sugar.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Buy Little Millet Biscuit online - 100% Fresh quality" data-noaft="1" style="width: 415px; height: 276.864px; margin: 0px;"></p>
+                    <ul>
+                        <li> <strong>[4] Flaked products </strong></li>
+                    </ul>
+                    <p>Cereal popped products and flakes are a popular breakfast option, commonly made from corn. However, with suitable processing, it may be possible to produce popped foods and flakes using millets. These Ready-To-Eat products are highly sought-after for their crispy and crunchy texture. The small size and quick hydration of millets make them ideal for creating flakes and popped products.
+
+                        To promote the use of alternative and sustainable grains in breakfast foods, we have flaked and popped small millets and standardized a variety of recipes. These products offer a unique and delicious alternative to traditional corn-based cereal flakes and popped products. By incorporating millets into these breakfast options, we hope to enhance their nutritional value, offering the many health benefits associated with these grains. Additionally, the use of millets in these products promotes sustainable agriculture and supports local farmers, making them a responsible choice for conscious consumers.</p>
+                        <p><img src="https://5.imimg.com/data5/SELLER/Default/2020/11/SE/RW/HX/43093269/kodo-millet-flakes-500x500.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Natural Little Millet Flakes, For Porridge,Indian Cuisine, Organic at Rs  125/kg in Bengaluru" data-noaft="1" style="width: 387px; height: 387px; margin: 0px;"></p>
+                  
+                  <h2>Reference</h2>
+                  <hr>
+                  <p>
+                   <ul>
+                       
+                      <li>[1] <a href="https://www.millets.res.in/farmer/Small_Millet_Pub/2018/5Littlemillet.pdf">Improved Production Technology for Little Millet </a></li>
+                      <li>[2]P. Anbukkani, S. J. Balaji and M.L. Nithyashree(2016) <a href="https://www.researchgate.net/publication/327574830_Production_and_consumption_of_minor_millets_in_India-_A_structural_break_analysis">Production and consumption of minor millets in India- A structural break analysis </a>Scientists, Division of Agricultural Economics, ICAR-Indian Agricultural Research Institute, New Delhi-110012.</li>
+                      <li>[3]Ambana Gouda Durgad
+                        , Amrutha T. Joshi, Suresh S. Patil, G.M. Hiremath,
+                        S.B. Goudappa and N. Ananda (2019)<a href="https://www.ijcmas.com/special/9/Ambana%20Gouda%20Durgad,%20et%20al.pdf"> Economics of Foxtail and Little Millets Production in Ballari and
+                        Koppal Districts of Karnataka, India
+                        </a>International Journal of Current Microbiology and Applied Sciences
+                        ISSN: 2319-7706 Special Issue-9 pp. 214-222.</li>
+                      
+                      <li> [4] <a href="http://www.agritech.tnau.ac.in/postharvest/pdf/2014/Value_Added_Products_From_Small_Millets.pdf"> Value Added Products From Small Millets  </a></li>
+                      <li>[5] <a href="https://www.nutricereals.dac.gov.in/IYoM2023/Data/Value%20addition%20and%20market%20linkages.pdf"> Value Addition & Market Linkages in Millets </a></li>
+                     
+                      
+                   </ul>
+                  </p>
+                      
+</body>
+</html>

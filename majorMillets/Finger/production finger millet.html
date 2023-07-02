@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+<style type="text/css">
+
+  /* ============ desktop view ============ */
+  @media all and (min-width: 992px) {
+  
+    .dropdown-menu li{
+      position: relative;
+    }
+    .dropdown-menu .submenu{ 
+      display: none;
+      position: absolute;
+      left:100%; top:-7px;
+    }
+    .dropdown-menu .submenu-left{ 
+      right:100%; left:auto;
+    }
+  
+    .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+    .dropdown-menu > li:hover > .submenu{
+      display: block;
+    }
+  }	
+  /* ============ desktop view .end// ============ */
+  
+  /* ============ small devices ============ */
+  @media (max-width: 991px) {
+  
+  .dropdown-menu .dropdown-menu{
+      margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+  }
+  
+  }	
+  /* ============ small devices .end// ============ */
+  
+  .masthead{
+      background-size: cover;
+      min-height: 100vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    opacity: 80%;
+  }
+  </style>
+  
+  
+  <script type="text/javascript">
+  //	window.addEventListener("resize", function() {
+  //		"use strict"; window.location.reload(); 
+  //	});
+  
+  
+    document.addEventListener("DOMContentLoaded", function(){
+          
+  
+        /////// Prevent closing from click inside dropdown
+      document.querySelectorAll('.dropdown-menu').forEach(function(element){
+        element.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      })
+  
+  
+  
+      // make it as accordion for smaller screens
+      if (window.innerWidth < 992) {
+  
+        // close all inner dropdowns when parent is closed
+        document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+          everydropdown.addEventListener('hidden.bs.dropdown', function () {
+            // after dropdown is hidden, then find all submenus
+              this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                // hide every submenu as well
+                everysubmenu.style.display = 'none';
+              });
+          })
+        });
+        
+        document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+          element.addEventListener('click', function (e) {
+      
+              let nextEl = this.nextElementSibling;
+              if(nextEl && nextEl.classList.contains('submenu')) {	
+                // prevent opening link if link needs to open dropdown
+                e.preventDefault();
+                console.log(nextEl);
+                if(nextEl.style.display == 'block'){
+                  nextEl.style.display = 'none';
+                } else {
+                  nextEl.style.display = 'block';
+                }
+  
+              }
+          });
+        })
+      }
+      // end if innerWidth
+  
+    }); 
+    // DOMContentLoaded  end
+  </script>
+    <title>History </title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+       <a class="navbar-brand" href="/home page .html">Home</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     <div class="collapse navbar-collapse" id="main_nav">
+     
+   
+     <ul class="navbar-nav">
+       
+       <li class="nav-item"><a class="nav-link" href="/About.html"> About </a></li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Millet  </a>
+           <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="/millets/history.html"> History </a></li>
+           
+          
+           <li><a class="dropdown-item" href="/millets/Taxonomy.html"> Taxonomy </a></li>
+           <li><a class="dropdown-item" href="/millets/types of millet.html"> Types </a>
+           <li><a class="dropdown-item" href="/millets/Nutrition.html"> Nutrition </a>
+           <li><a class="dropdown-item" href="/millets/Cultivation.html"> Cultivation </a>
+           <li><a class="dropdown-item" href="/millets/production.html"> Production </a>
+           </ul>
+       </li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Major Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Finger/history finger millet.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/taxonomy finger millet.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/varieties finger millet.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/nutrition finger millet.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/cultivation finger millet.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/production finger millet.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/antioxidant finger millet.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/varieties.html"> varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/production.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/antioxidant.html"> Antioxidant </a>
+   
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/antioxidant.html"> Antioxidant </a>
+           </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Praso/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Minor Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Kudo/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/production.html"> Production </a>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Little/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Little/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/antioxidants.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Teff/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/antioxidant .html"> Antioxidant </a>	
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+   
+
+       
+
+
+  
+       
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Major Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Dietary fibre component..html"> Dietary fiber </a></li>
+            
+            
+                <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Polyphenols.html"> Polyphenols   </a>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/dietary fibre.html"> Dietary fiber  </a>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/polyphenols.html"> Polyphenols </a></li>
+              
+              
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/dietary fibre.html">Dietary fiber </a></li>
+               
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/Polyphenol.html"> Polyphenols </a></li>
+            
+            
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/dietary fibre.html"> Dietary fiber </a> </li>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/Polyphenols.html"> Polyphenols </a></li>
+             
+            
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+  
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Minor Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/Polyphenols.html"> Polyphenol</a></li>
+          
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/Phytochemicals.html"> Polyphenols </a></li>
+          
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/dietary fibre.html"> Dietary fiber </a></li>
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/polyphenols.html"> Polyphenol</a></li>
+                
+                
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/polyphenols.html"> Polyphenols   </a></li>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/dietary fibre.html"> Dietary fiber </a></li>
+              
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/phytochemicals.html"> Polyphenols </a>
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+      <li class="nav-item"><a class="nav-link" href="/team.html"> Team </a></li>
+  
+    </ul>
+     
+   
+     </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+   </nav>
+<body>
+  <body style="background-color:antiquewhite;"></body>
+    <style>
+        p{font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+        font-style: normal;}
+            </style>
+            <h1>Production </h1>
+            <div>
+                <p>In India, Karnataka is the major  producer of finger millet accounting to 58% of its global production . In India  finger millet  stands on sixth  position on production after wheat, rice, maize, sorghum and bajra.
+                </p>
+            </div>
+            <div>
+                <p>In world, finger millet stands on  fourth place  among millets after pearl millet and foxtail millet . It is widely cultivated in Africa and South Asia under extreme weather conditions and it is estimated that some 10% of the world's 30 million tons of millet produced is finger millet . </p>
+
+            </div>
+            <h2>Value Added Products from Finger Millet:</h2>
+            <hr>
+            <div>
+                <p>Ragi    is a great
+                    substitute for other  starchy grains  and it can be used in different  ways. Ragi is most nutritious food and it is rich in carbohydrate ,  protein , calcium and other minerals <a href="https://www.researchgate.net/publication/338831962_DEVELOPMENT_OF_VALUE_ADDED_PRODUCT_FROM_FINGER_MILLET_Eleusine_coracana"class="button"> [1] </a> .   Following examples are given below :- 
+                   </p>
+
+            </div>
+            <h3>Chapatti (Roti): </h3>
+            <hr>
+            <p>     In the ratio of 7:3 wheat and finger millet are mixed   for
+                making chapatti (roti).  Gluten content is reduced  in this mixture while making of
+                flattering chapatti is not affected. The  color of ragi  chapatti turns to slightly dark.
+                Fortification of finger millet in chapattis is used for   improving    the taste but also controls glucose levels in
+                diabetic patients very efficiently. Ragi chapatti  may help to prevent from eating excess calories because of  slower digestion rate and bulkiness of the fibres makes us feel fuller
+                on, fewer calories . 
+        It  is also  helpful to the individuals having the problem of constipation.
+                </p>
+                <p><img src="https://www.sharmispassions.com/wp-content/uploads/2020/12/37857121721_7f51f67028_o.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Ragi Roti Recipe - Sharmis Passions" data-noaft="1" style="width: 290.403px; height: 387px; margin: 0px;">
+                </p>
+                <h3>Papad:</h3>
+                <hr>
+                <p>Papad from finger millet, 15-20% (w/w) flour  is used along with 
+                    black or green gram, rice and spices is also prepared in which it is used as base material. this  flour
+                    is first cooked in water till it is gelatinized and dough is prepared for papad . From this dough thin sheet are
+                    prepared by rolling it and cutting into different shapes and sizes . 
+    . However it gives slightlys dark color to the papad as
+                    the pericarp is not separated out from the starch, which again upon frying or roasting turns to lighter
+                    with good consumer acceptability.</p>
+                    <p><img src="http://vidhatafoods.com/assets/images/ragipapaddetail.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Vidhata Foods" data-noaft="1" style="width: 351px; height: 175.5px; margin: 0.45px 0px;"></p>
+                    <div>
+                        <h3>Puffing or Popping:</h3>
+                        <hr>
+                        <p>: It is  popular traditional ready to eat food  with delicious flavor. 
+                             
+                            This process improves the nutritional value by inactivating some of the anti- nutritional factors and
+                            thereby enhancing the protein and carbohydrate digestibility. This process enhance    the appearance, color, taste and aroma
+                            of the processed raw material .  For puffing, the whole ragi 
+                             grain is conditioned by mixing additional water and  tempered for about 4-6 hours under shed.  During this process, the sugar
+                            react with amino acids of the millet causing Millard reaction and as a result, a pleasant and
+                            highly desired aroma is developed. During this process, the vapour pressure of the grain
+                            increases and the moisture present in the grain turns into steam and  gelatinization of the starch takes
+                            places and explodes. During this process as grains are dehydrated to extremely low level of moisture content and increase its shelf-life .  
+                            
+
+
+                    </div>
+                    <p> <div class="responsive">
+                        <div class="gallery">
+                          <a target="_blank" href="//5.imimg.com/data5/KM/FK/MY-5576707/ragi-puffs-500x500.jpg">
+                            <img src="//5.imimg.com/data5/KM/FK/MY-5576707/ragi-puffs-500x500.jpg" alt="Forest" width="600" height="400">
+                          </a>
+                          <div class="desc">Ragi puffs </div>
+                          
+                        </div>
+                    </div>
+                   
+                   <div>
+                    <h3>Malting – Weaning Food:</h3>
+                    <hr>
+                    <p>For infant feeding purpose traditionally the millet malt is utilized and also
+                        to prepare beverages either with milk of lukewarm water with the addition of sugar . 
+                        Finger millet having good malting characteristics is used to prepare weaning foods and malting of ragi improves its digestibility, sensory and nutritional quality as well as has pronounced effect in lowering
+                        the antinutrients. Finger millet  is resistant to fungal infection  
+                        elaboration of alpha and beta amylase during germination and during desirable aroma is developed
+                         . For milk based beverage
+                        the malted weaning food is mixed with powdered sugar, milk powder or whole milk along with
+                        flavoring agents. Malting  is a good source of nutrition and suitable for all the age groups.
+                       </p>
+                   </div>
+                   <p><img src="https://udupi-recipes.com/wp-content/uploads/2018/10/healthy-ragi-milk-porridge-for-babies-768x1024.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Ragi Milk Porridge | Finger Millet Porridge for Babies - Udupi Recipes" data-noaft="1" style="width: 290.25px; height: 387px; margin: 0px;"></p>
+                
+                  <div>
+                    <h3>Noodles – Vermicelli:</h3>
+                    <hr>
+                    <p>: Millet vermicelli are staple food in many countries and  changing food habits of children and teenaged groups have created a good
+                        market of noodles in world .  Due to awareness of its nutritional properties  demand for millet noodles is increasing s
+                        . Different combinations of Noodles are
+                        prepared, exclusively made of finger millet, finger millet and wheat in the ratio of 1:1 and finger
+                        millet blended with wheat and soy flour in the ratio of 5:4:1.Noodles are the pasta like products also
+                        known as convenience foods prepared through cold extrusion system which become hard and brittle
+                        after drying. The cooking of these noodles is very convenient and requires few minutes.
+                        </p>
+                        <p><img id="img_id" class="drift-demo-trigger" src="//5.imimg.com/data5/SELLER/Default/2021/10/PS/IH/UM/137422337/2-500x500.jpg" data-src="//5.imimg.com/data5/SELLER/Default/2021/10/PS/IH/UM/137422337/2-500x500.jpg" data-zoom="//5.imimg.com/data5/SELLER/Default/2021/10/PS/IH/UM/137422337/2-1000x1000.jpg" alt="Finger Millet Noodles, Packaging Size: 175 Gms To 200 Gms"></p>
+
+                  </div>
+                  <div>
+                    <h3>Extruded Products:</h3>
+                    <hr>
+                    <p>This  is a novel way of transforming ingredients into value
+                        added products.  Extruded products prepared from different grains are gaining importance  among
+                        the all age groups and their demand is growing, one such example is ‘Kurkure’, very popular among
+                        children.  Finger millet flour like
+                        other preparations can be blended with other legume flour ingredients in appropriate proportion with
+                        further fortification of minerals and vitamins to design a balanced nutritional extruded food . </p>
+                        <p><img src="https://i.ytimg.com/vi/iV_Tc0AGgA8/maxresdefault.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Ragi Murukku | ராகி முறுக்கு| Finger Millet Murukku | Ragi Chakli Recipe |  Taste of South India - YouTube" data-noaft="1" style="width: 415px; height: 233.438px; margin: 0px;"></p>
+                        
+                  </div>
+                  <div>
+                    <h3>Fermented Foods:</h3>
+                    <hr>
+                    <p> Dosa and Idli are popular fermented foods in many parts of India and 
+                        very common breakfast foods and evening meals in southern part of the country.By adding this millet in food it enhance taste and at the same time enriches the food value in terms of protein, calcium and fibre.  
+                       Depending on taste and choice sprouted finger millets are used for fermented foods . 
+                        
+                        </p>
+                        <p><img src="https://1.bp.blogspot.com/-LHenHlQFTtU/X8gK7hBSAoI/AAAAAAAARzw/6wmHX4-WpBYgvOO1S6aDSw_ZQapAf-JzQCNcBGAsYHQ/s640/Ragi%2BIdli%2B%2526%2BDosai.JPG" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Sandhiya's Cookbook: Ragi Idli and Dosa using Whole Grain | Kezhvaragu Idli  and Dosai" data-noaft="1" style="width: 295.692px; height: 387px; margin: 0px;">
+                        </p>
+                  </div>
+                  <div>
+                    <h3>Ragi Soup:</h3>
+                    <hr>
+                    <p>: Ragi soup is prepared by mixing the ragi flour into water and stirring is used so that lump formation should not occur and the mix
+                        should leave a smooth and thick body.  This mix is  heated For  15-17 minutes under medium heat . 
+                        .  To  avoid   lump formation Continuous stirring is needed .
+                         Mix is removed from the heat after cooking then  and mixed with curd  and salt to taste. After
+                        leaving it for another 5 minutes it is ready to serve as warm. 
+                        
+                       </p>
+                        <p><img src="https://www.palatesdesire.com/wp-content/uploads/2022/04/Ragi-soup-recipe@palates-desire.jpg" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 1200px; height: 415px; margin: 0px; width: 415px;" alt="Ragi Soup ( Step By Step with Video ) - Palate's Desire" jsname="kn3ccd" aria-hidden="false"></p>
+ 
+                        </p>
+
+                  </div>
+            
+            <h2>
+                Reference
+            </h2>
+            <hr>
+           <p>
+            <ul>
+                <li>[1]Vaishnavi Devi.N , R.Sinthiya (2018) <a href="https://oaji.net/articles/2017/1330-1520668042.pdf"class="button"> Development  of  value  added  product  from  Finger 
+                    Millet  (Eleusine coracana)
+                       </a> International journal of research - Granthaalayah </li>
+                
+                
+                <li>[2] S. Sakamma1
+                    , K. B. Umesh1 et. al (2018) <a href="https://pdfs.semanticscholar.org/d7c8/37c0e8f6ec674568bf66ced016ecc7bb0e94.pdf"class="button"> Finger Millet (Eleusine coracana L. Gaertn.) Production System:
+                    Status, Potential, Constraints and Implications for Improving Small
+                    Farmer’s Welfare    </a>Journal of Agricultural Science; Vol. 10, No. 1. </li>
+                <li>[3] <a href="https://leisaindia.org/intensification-of-finger-millet-production-an-agro-ecological-innovation/"class="button"> Intensification of finger millet production – An agro-ecological innovation   </a></li>
+                <li>[4] <a href="https://www.millets.res.in/technologies/Technologies_of_millet_value_added_products.pdf"class="button">Technologies of
+                    Millet Value Added Products    </a></li>
+                
+                <li>[5] <a href="http://www.kvkdantewadacg.org/footfall/Value_added_products_of_Ragi.pdf"class="button"> Value added products from ragi     </a></li>
+                <li>[6]Veenu Verma* and S. Patel(2013)
+                  <a href="https://www.ejfa.me/index.php/journal/article/download/824/596"class="button"> Value added products from nutri-cereals: Finger millet .   </a>Emir. J. Food Agric. 2013. 25 (3): 169-176</li>
+                <li>[7]PK Ambre, AA Sawant and PS Sawant(2020)
+                  <a href="https://www.phytojournal.com/archives/2020/vol9issue2/PartG/9-1-329-730.pdf"class="button"> Processing and value addition: A finger millet
+                    review
+                       </a>Journal of Pharmacognosy and Phytochemistry ; 9(2): 375-380
+                      </li>
+                
+                
+                       <a href=""class="button"> </a>
+                        
+                           
+            </ul>
+           </p>
+           
+</body>
+</html>

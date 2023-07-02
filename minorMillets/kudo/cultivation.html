@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultivation of kodo millet </title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+<style type="text/css">
+
+  /* ============ desktop view ============ */
+  @media all and (min-width: 992px) {
+  
+    .dropdown-menu li{
+      position: relative;
+    }
+    .dropdown-menu .submenu{ 
+      display: none;
+      position: absolute;
+      left:100%; top:-7px;
+    }
+    .dropdown-menu .submenu-left{ 
+      right:100%; left:auto;
+    }
+  
+    .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+    .dropdown-menu > li:hover > .submenu{
+      display: block;
+    }
+  }	
+  /* ============ desktop view .end// ============ */
+  
+  /* ============ small devices ============ */
+  @media (max-width: 991px) {
+  
+  .dropdown-menu .dropdown-menu{
+      margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+  }
+  
+  }	
+  /* ============ small devices .end// ============ */
+  
+  .masthead{
+      background-size: cover;
+      min-height: 100vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    opacity: 80%;
+  }
+  </style>
+  
+  
+  <script type="text/javascript">
+  //	window.addEventListener("resize", function() {
+  //		"use strict"; window.location.reload(); 
+  //	});
+  
+  
+    document.addEventListener("DOMContentLoaded", function(){
+          
+  
+        /////// Prevent closing from click inside dropdown
+      document.querySelectorAll('.dropdown-menu').forEach(function(element){
+        element.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      })
+  
+  
+  
+      // make it as accordion for smaller screens
+      if (window.innerWidth < 992) {
+  
+        // close all inner dropdowns when parent is closed
+        document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+          everydropdown.addEventListener('hidden.bs.dropdown', function () {
+            // after dropdown is hidden, then find all submenus
+              this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                // hide every submenu as well
+                everysubmenu.style.display = 'none';
+              });
+          })
+        });
+        
+        document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+          element.addEventListener('click', function (e) {
+      
+              let nextEl = this.nextElementSibling;
+              if(nextEl && nextEl.classList.contains('submenu')) {	
+                // prevent opening link if link needs to open dropdown
+                e.preventDefault();
+                console.log(nextEl);
+                if(nextEl.style.display == 'block'){
+                  nextEl.style.display = 'none';
+                } else {
+                  nextEl.style.display = 'block';
+                }
+  
+              }
+          });
+        })
+      }
+      // end if innerWidth
+  
+    }); 
+    // DOMContentLoaded  end
+  </script>
+    <title>History </title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+       <a class="navbar-brand" href="/home page .html">Home</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     <div class="collapse navbar-collapse" id="main_nav">
+     
+   
+     <ul class="navbar-nav">
+       
+       <li class="nav-item"><a class="nav-link" href="/About.html"> About </a></li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Millet  </a>
+           <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="/millets/history.html"> History </a></li>
+           
+          
+           <li><a class="dropdown-item" href="/millets/Taxonomy.html"> Taxonomy </a></li>
+           <li><a class="dropdown-item" href="/millets/types of millet.html"> Types </a>
+           <li><a class="dropdown-item" href="/millets/Nutrition.html"> Nutrition </a>
+           <li><a class="dropdown-item" href="/millets/Cultivation.html"> Cultivation </a>
+           <li><a class="dropdown-item" href="/millets/production.html"> Production </a>
+           </ul>
+       </li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Major Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Finger/history finger millet.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/taxonomy finger millet.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/varieties finger millet.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/nutrition finger millet.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/cultivation finger millet.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/production finger millet.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/antioxidant finger millet.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/varieties.html"> varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/production.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/antioxidant.html"> Antioxidant </a>
+   
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/antioxidant.html"> Antioxidant </a>
+           </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Praso/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Minor Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Kudo/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/production.html"> Production </a>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Little/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Little/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/antioxidants.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Teff/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/antioxidant .html"> Antioxidant </a>	
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+   
+       
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Major Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Dietary fibre component..html"> Dietary fiber </a></li>
+            
+            
+                <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Polyphenols.html"> Polyphenols   </a>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/dietary fibre.html"> Dietary fiber  </a>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/polyphenols.html"> Polyphenols </a></li>
+              
+              
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/dietary fibre.html">Dietary fiber </a></li>
+               
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/Polyphenol.html"> Polyphenols </a></li>
+            
+            
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/dietary fibre.html"> Dietary fiber </a> </li>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/Polyphenols.html"> Polyphenols </a></li>
+             
+            
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+  
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Minor Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/Polyphenols.html"> Polyphenol</a></li>
+          
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/Phytochemicals.html"> Polyphenols </a></li>
+          
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/dietary fibre.html"> Dietary fiber </a></li>
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/polyphenols.html"> Polyphenol</a></li>
+                
+                
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/polyphenols.html"> Polyphenols   </a></li>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/dietary fibre.html"> Dietary fiber </a></li>
+              
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/phytochemicals.html"> Polyphenols </a>
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+      <li class="nav-item"><a class="nav-link" href="/team.html"> Team </a></li>
+  
+    </ul>
+   
+     
+   
+     </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+   </nav>
+<body>
+    <body style="background-color:antiquewhite;"></body> 
+<body>
+    
+    <style>
+        p{font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+        font-style: normal;}
+        </style>
+        <h1>Cultivation</h1>
+        
+        <p>Kodo millet is an important crop in India and is primarily grown in the states of Madhya Pradesh, Chhattisgarh, Maharashtra, Tamil Nadu, and Karnataka. However, it is also cultivated in other parts of the country, including the Jhum fields of Arunachal Pradesh. Kodo millet is a drought-resistant crop that can grow in poor soil conditions, making it an important crop for farmers in many parts of India. It is also a highly nutritious grain that is gluten-free and has a low glycemic index, making it a popular choice for those with dietary restrictions or concerns about blood sugar management.
+
+        </p>
+     <strong>Season</strong>
+     <hr>
+     <p>The onset of monsoon is considered advantageous for sowing crops. In different states of India, the sowing season for Kodo millet typically ranges from the middle of June to the end of July. In Madhya Pradesh and Chhattisgarh, farmers generally opt to sow their Kodo millet crops during the last week of June to the first week of July. This timing is believed to be most favorable for the growth and development of the crop, as the monsoon season provides sufficient moisture for germination and early growth.</p>
+    <strong>Climate</strong>
+    <hr>
+    <p>Millets are typically grown in regions with tropical and sub-tropical climates, up to an altitude of 2,100 meters above sea level. As a heat-loving plant, millet thrives in areas where the average temperature is high. Rainfall is also an important factor in millet cultivation, with the crop typically requiring between 500-900mm of rainfall. However, Kodo millet is known to have a heavier water requirement and can grow well in regions with moderate rainfall of around 50-60cm.</p>
+    <strong>Soil</strong>
+    <hr>
+    <p>Kodo millet is a highly adaptable crop that can grow in a wide range of soils, from very poor to very fertile. The crop can also tolerate a certain degree of alkalinity in the soil. However, Kodo millet grows best in soils that are alluvial, loamy, or sandy, and have good drainage. In hilly regions, Kodo millet can even be cultivated in gravelly and stony soils. The plant's ability to thrive in different soil types makes it a popular crop among farmers in many parts of India.</p>
+    <strong>Field preparation</strong>
+    <hr>
+    <P>For successful cultivation of Kodo millet, it is essential to carry out the first ploughing deep into the soil, using a soil turning plough, at the onset of monsoon. This will help to create a suitable seedbed for planting and ensure that the soil is loose and aerated, which is necessary for proper germination and crop establishment. It is important to ensure that the soil is properly prepared and broken up into a fine tilth, to facilitate the growth of the Kodo millet crop. Adequate soil preparation is critical for ensuring optimal yield and quality of the final product.</P>
+    <strong>Spacing</strong>
+    <hr>
+    <p>The recommended spacing for Kodo millet planting is 20-25cm row-to-row and 8-10cm plant-to-plant. This ensures that each plant has sufficient space to grow and develop properly, without competing with neighboring plants for resources such as nutrients, water, and sunlight. Appropriate spacing also allows for efficient weed control and ease of harvesting. It is important to adhere to these recommended spacing guidelines to achieve maximum yield and quality of the Kodo millet crop.
+
+    </p>
+    <strong>Seed Rate</strong>
+    <hr>
+    <p>The recommended seed rate for Kodo millet varies depending on the method of sowing. For line sowing, the recommended seed rate is 10 kg per hectare.On the other hand, for broadcasting, the recommended seed rate is slightly higher at 15 kg per hectare.
+
+    </p>
+    <strong>Seed Treatment</strong>
+    <hr>
+    <p>To ensure healthy growth and development of Kodo millet, it is recommended to treat the seeds with either Agrosan G.N. or Thiram, at a rate of 2.5g per kilogram of seed. This will help to protect the seeds from soil-borne diseases and pests, and increase their chances of germination.
+
+        Additionally, treating the seeds with beneficial microorganisms like Azospirillum brasilense (a nitrogen-fixing bacterium) and Aspergillus awamori (a phosphate-solubilizing fungus) can provide further benefits. Applying 25 grams of these microorganisms per kilogram of seed has been found to be beneficial for the crop's growth and yield.
+        
+        Using high-quality seeds and treating them with appropriate agents can help to ensure a healthy and productive Kodo millet crop.
+        </p>
+        <strong>Method of sowing</strong>
+        <hr>
+        <p>For line sowing of Kodo millet, it is recommended to sow the seeds at a depth of 3-4cm. This ensures that the seeds are planted at a sufficient depth in the soil to facilitate proper germination and growth. 
+
+        
+        <strong>Transplanted crop</strong>
+        <hr>
+        <p> </p>To ensure successful transplantation of Kodo millet, it is recommended to sow the seeds in well-prepared nursery beds during the months of May to July. Using approximately 4 kilograms of seed can yield enough seedlings to transplant one hectare of land.
+
+        When the seedlings are 3 to 4 weeks old, they should be transplanted into the main field. The recommended spacing for transplantation is 25x8 cm, with two seedlings per hill. Alternatively, the seedlings can be transplanted to a depth of 2-3cm deep.</p>
+        
+        </p>
+        
+          <strong>Weed Control</strong>
+          <hr>
+          <p>For effective weed control, inter-cultivation and weeding should be carried out using a suitable tool such as a hand hoe. Depending on the severity of weed infestation in specific areas, two to four hoeing sessions may be required. It is essential to remove weeds before they become too large and start competing with crops for nutrients and sunlight. Therefore, timely and adequate weeding is crucial to ensure optimal crop growth and yield.
+        </p>
+        <strong>Disease Management</strong>
+        <hr>
+        <p>Head smut, which is caused by the fungus Sorosporium paspali-thunbergi, is a significant disease that affects crops. The pathogen is primarily seed-borne, and therefore, seed treatment is an effective way to control the disease. Chlorothalonil or Mancozeb can be used for seed treatment at a rate of 2g per kg of seeds. Additionally, planting the GPUK 3 variety can help in preventing head smut since it has been found to be tolerant to the disease. Regular monitoring of crops for disease symptoms and early intervention can also aid in minimizing the impact of head smut on crop yield.</p>
+            <ul>
+                <h3>Blast : </h3> Early blight is a disease that can infect crops during the seedling stage, causing gray-green to yellow lesions on the leaf blades. To prevent the spread of the disease, it is recommended to treat seeds with Agrosan GN or Cerasan at a rate of 2.5g per kg of seed before sowing. Planting resistant varieties can also help in controlling the disease. It is crucial to monitor crops regularly for early blight symptoms and take appropriate measures, such as removing and destroying infected plant parts, to prevent the disease from spreading to healthy plants. By following these preventive measures, farmers can minimize the impact of early blight on crop yield and quality.
+
+
+
+
+
+            </ul>
+        </p>
+        <p>
+            <ul>
+                <h3>Seedling blight :</h3>  Some diseases can cause significant damage to crops and must be addressed promptly to prevent yield loss. For effective disease control, spraying a 0.02% solution of Dithane U-45 is recommended. This fungicide can be used to control a range of plant diseases and is particularly effective against certain types of fungi. It is essential to follow the recommended application rate and schedule to ensure that crops receive adequate protection. Regular monitoring of crops for disease symptoms is also critical, as early intervention can help prevent the spread of the disease and minimize its impact on crop yield. By implementing these measures, farmers can minimize the risk of significant crop damage due to diseases.
+
+            </ul>
+        </p>
+        <strong>Insect Pest</strong>
+        <hr>
+        <p>Stem Borer,  Hairy Caterpillar, Grass hopper , Caterpiller.</p>
+        <ul>
+        
+        </ul>
+        <h2>Reference</h2>
+        <hr>
+        <p>
+         <ul>
+             
+            <li>[1] <a href="https://vikaspedia.in/agriculture/crop-production/package-of-practices/cereals-and-millets/finger-millet-and-kodo-millet#:~:text=Generally%20the%20Millets%20are%20grown,moderate%20rainfall%20of%2050%2D60cm."> Cultivation of finger millet  </a></li>
+            <li>[2] <a href="https://www.agrifarming.in/kodo-millet-farming-cultivation-practices"> Kodo Millet Farming; Cultivation Practices </a></li>
+            <li>[3] <a href="https://www.millets.res.in/technologies/3-Recommended_Package_of_Practices-Kodo_Millet.pdf">Recommended package of practices 
+            </a></li>
+            <li>[4] <a href="https://www.villagesquare.in/traditional-millet-cultivation-by-gonds-needs-revival/">Traditional millet cultivation by Gonds needs revival </a></li>
+            <li> [5] <a href="https://kvk.icar.gov.in/API/Content/PPupload/k0162_27.pdf">Cultivation of Millets (Finger millet and Kodo millet) </a></li>
+           
+            
+         </ul>
+        </p>
+       
+</body>
+</html>

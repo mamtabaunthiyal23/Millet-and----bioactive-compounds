@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+<style type="text/css">
+
+  /* ============ desktop view ============ */
+  @media all and (min-width: 992px) {
+  
+    .dropdown-menu li{
+      position: relative;
+    }
+    .dropdown-menu .submenu{ 
+      display: none;
+      position: absolute;
+      left:100%; top:-7px;
+    }
+    .dropdown-menu .submenu-left{ 
+      right:100%; left:auto;
+    }
+  
+    .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+    .dropdown-menu > li:hover > .submenu{
+      display: block;
+    }
+  }	
+  /* ============ desktop view .end// ============ */
+  
+  /* ============ small devices ============ */
+  @media (max-width: 991px) {
+  
+  .dropdown-menu .dropdown-menu{
+      margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+  }
+  
+  }	
+  /* ============ small devices .end// ============ */
+  
+  .masthead{
+      background-size: cover;
+      min-height: 100vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    opacity: 80%;
+  }
+  </style>
+  
+  
+  <script type="text/javascript">
+  //	window.addEventListener("resize", function() {
+  //		"use strict"; window.location.reload(); 
+  //	});
+  
+  
+    document.addEventListener("DOMContentLoaded", function(){
+          
+  
+        /////// Prevent closing from click inside dropdown
+      document.querySelectorAll('.dropdown-menu').forEach(function(element){
+        element.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      })
+  
+  
+  
+      // make it as accordion for smaller screens
+      if (window.innerWidth < 992) {
+  
+        // close all inner dropdowns when parent is closed
+        document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+          everydropdown.addEventListener('hidden.bs.dropdown', function () {
+            // after dropdown is hidden, then find all submenus
+              this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                // hide every submenu as well
+                everysubmenu.style.display = 'none';
+              });
+          })
+        });
+        
+        document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+          element.addEventListener('click', function (e) {
+      
+              let nextEl = this.nextElementSibling;
+              if(nextEl && nextEl.classList.contains('submenu')) {	
+                // prevent opening link if link needs to open dropdown
+                e.preventDefault();
+                console.log(nextEl);
+                if(nextEl.style.display == 'block'){
+                  nextEl.style.display = 'none';
+                } else {
+                  nextEl.style.display = 'block';
+                }
+  
+              }
+          });
+        })
+      }
+      // end if innerWidth
+  
+    }); 
+    // DOMContentLoaded  end
+  </script>
+    <title>History </title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+       <a class="navbar-brand" href="/home page .html">Home</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     <div class="collapse navbar-collapse" id="main_nav">
+     
+   
+     <ul class="navbar-nav">
+       
+       <li class="nav-item"><a class="nav-link" href="/About.html"> About </a></li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Millet  </a>
+           <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="/millets/history.html"> History </a></li>
+           
+          
+           <li><a class="dropdown-item" href="/millets/Taxonomy.html"> Taxonomy </a></li>
+           <li><a class="dropdown-item" href="/millets/types of millet.html"> Types </a>
+           <li><a class="dropdown-item" href="/millets/Nutrition.html"> Nutrition </a>
+           <li><a class="dropdown-item" href="/millets/Cultivation.html"> Cultivation </a>
+           <li><a class="dropdown-item" href="/millets/production.html"> Production </a>
+           </ul>
+       </li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Major Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Finger/history finger millet.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/taxonomy finger millet.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Finger/varieties finger millet.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/nutrition finger millet.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/cultivation finger millet.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/production finger millet.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Finger/antioxidant finger millet.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Foxtail/varieties.html"> varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/production.html"> Production </a>
+             <li><a class="dropdown-item" href="/majorMillets/Foxtail/antioxidant.html"> Antioxidant </a>
+   
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Pearl/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Pearl/antioxidant.html"> Antioxidant </a>
+           </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/majorMillets/Praso/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/majorMillets/Praso/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/majorMillets/Praso/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Minor Millet  </a>
+           <ul class="dropdown-menu">
+   
+           <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Kudo/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="../minorMillets/Kudo/production.html"> Production </a>
+               <li><a class="dropdown-item" href="../minorMillets/Kudo/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Little/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Little/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Little/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Little/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/histroy.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Fonio/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Fonio/antioxidants.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Barnyard/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Barnyard/antioxidant.html"> Antioxidant </a>
+            </ul>
+           </li>
+           <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="/minorMillets/Teff/history.html"> History </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/taxonomy.html"> Taxonomy </a></li>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/varieties.html"> Varieties </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/nutrition.html"> Nutrition </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/cultivation.html"> Cultivation </a>
+             <li><a class="dropdown-item" href="/minorMillets/Teff/production.html"> Production </a>
+               <li><a class="dropdown-item" href="/minorMillets/Teff/antioxidant .html"> Antioxidant </a>	
+            </ul>
+           </li>
+   
+           
+           </ul>
+       </li>
+   
+       
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Major Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Finger Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Dietary fibre component..html"> Dietary fiber </a></li>
+            
+            
+                <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Finger/Polyphenols.html"> Polyphenols   </a>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Foxtail Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/dietary fibre.html"> Dietary fiber  </a>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Foxtail/polyphenols.html"> Polyphenols </a></li>
+              
+              
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Pearl Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/dietary fibre.html">Dietary fiber </a></li>
+               
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Pearl/Polyphenol.html"> Polyphenols </a></li>
+            
+            
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Proso Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+            <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/dietary fibre.html"> Dietary fiber </a> </li>
+            
+              <li><a class="dropdown-item" href="/bioactive compounds (major millet)/Proso/Polyphenols.html"> Polyphenols </a></li>
+             
+            
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+  
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Bioactive Compounds (Minor Millet)  </a>
+          <ul class="dropdown-menu">
+  
+          <li><a class="dropdown-item" href="#"> Kodo Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Kodo/Polyphenols.html"> Polyphenol</a></li>
+          
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Little Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Little/Phytochemicals.html"> Polyphenols </a></li>
+          
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Fonio Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/dietary fibre.html"> Dietary fiber </a></li>
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Fonio/polyphenols.html"> Polyphenol</a></li>
+                
+                
+           </ul>
+          </li>
+          <li><a class="dropdown-item" href="#"> Barnyard Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/dietary fibre.html"> Dietary fiber </a></li>
+             
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Barnyard/polyphenols.html"> Polyphenols   </a></li>
+            
+           </ul>
+          </li>
+  
+          <li><a class="dropdown-item" href="#"> Teff Millet &raquo; </a>
+             <ul class="submenu dropdown-menu">
+  
+  
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/dietary fibre.html"> Dietary fiber </a></li>
+              
+              <li><a class="dropdown-item" href="/bioactive compounds (minor millet)/Teff/phytochemicals.html"> Polyphenols </a>
+            
+           </ul>
+          </li>
+        
+         
+  
+          
+          </ul>
+      </li>
+  
+      <li class="nav-item"><a class="nav-link" href="/team.html"> Team </a></li>
+  
+    </ul>
+   
+     
+   
+     </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+   </nav>
+<body>
+    <body style="background-color:antiquewhite;"></body>
+    <style>
+        p{font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        font-style: normal;}
+        table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+    
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+    background-color:snow;
+    }
+    </style>
+    <h1>Varieties</h1>
+    <hr>
+    <h2> Salient  features of  released  varieties of  pearl  millet  (1990 TO 2010)</h2>
+    <table>
+        <tr>
+        <th>Sl. 
+            No.</th>
+        <th>Name of 
+            variety</th>
+        
+        <th>Institute where 
+            developed</th>
+        <th>Year of 
+            release</th>
+        
+        <th>Area of adaptation</th>
+        <th>Special features</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Raj Bajra 
+                Chari-2</td>
+            <td>Jobner</td>
+            <td>1990 </td>
+            <td>All India</td>
+            <td>This plant has tall and broad succulent leaves, making it an excellent source of high-quality green fodder. It is particularly well-suited to saline soils, making it a great option for farmers and ranchers working in challenging soil conditions. </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>ICMV15</td>
+            <td>ICRISAT 
+Hyderabad</td>
+            <td>1991 </td>
+            <td>Zone B</td>
+            <td> This plant is characterized by its tall, thick, semi-compact to compact cylindrical ear head, which contains yellow anthers. The plant's grains are obovate and grey in color, making them easy to identify. Overall, this plant is a hardy and reliable crop that produces a high yield of quality grains.</td>
+        </tr>
+          <tr>
+            <td>3 </td>
+            <td>Raj 171</td>
+            <td>AICPMIP ARS 
+Durgapura, Jaipur 
+and ICRISA</td>
+            <td>1992</td>
+            <td>All states </td>
+            <td>This plant has a tall, medium thick stem and produces long cylindrical earheads that are semi-compact to compact in shape. Its grains are obovate and grey-brown in color, and the plant is known for its resistance to downy mildew, which can be a common problem in some growing conditions. With these desirable traits, this plant is a great option for farmers and gardeners looking for a hardy crop that is reliable and resistant to disease. </td>
+          </tr>  
+          <tr>
+            <td>4</td>
+            <td>ICMV 221</td>
+            <td>ICRISAT 
+Hyderabad</td>
+            <td>1993</td>
+            <td>All India</td>
+            <td>This plant is medium-tall in height and has thick lanceolate leaves. It produces semi-compact earheads, which contain purple anthers, and the plant's grains are globular and dark grey in color. This plant is known for its hardy nature and ability to thrive in a range of growing conditions, making it a reliable choice for farmers and gardeners. With its distinctive purple anthers and unique globular grains, it is also a visually interesting addition to any garden or agricultural plot. </td>
+          </tr>  
+          <tr>
+            <tr>
+                <td>5</td>
+                <td>Anantas 
+(APS-I) </td>
+                <td>AICPMIP 
+Anantapur</td>
+                <td>1997</td>
+                <td>A.P.</td>
+                
+            <td>This plant has a growth period of 85 days and is of medium-tall height. It produces long cylindrical earheads and its grains are light grey in color. This plant is a reliable and hardy crop that is well-suited to a range of growing conditions. With its long cylindrical earheads and distinctive light grey grains, it is also a visually interesting addition to any garden or agricultural plot.</td>
+</tr>
+            <tr>
+                <td>6</td>
+                <td>Pusa 
+                    Composite 
+                    334</td>
+                <td>IARI, New Delhi</td>
+                <td>1999</td>
+                <td>Zone A</td>
+                <td>The developed cultivar has a growth period of 75-80 days and is characterized by its tall, thick semi-compact stature. It produces cylindrical earheads, and its obovate grey-brown grains are a distinguishing feature. This cultivar was developed by crossing three carefully selected lines with eight elite inbred lines to produce a hybrid with desirable traits.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>HC 10</td>
+                <td>AICPMIP CCS 
+                    HAU Hisar</td>
+                <td>2000</td>
+                <td>Haryana</td>
+                <td>This plant has a growth period of 75-80 days and is tall in height, with a medium-thick semi-compact earhead. Its anthers are purple and its grains are obovate and grey-brown in color. This variety is known for being dual-purpose, meaning it can be used for both grain and forage production. It was developed from a selection of high-yielding, early-flowering, and drought-tolerant NELC (National Evaluation and Release Committee) lines, ensuring its reliability and hardiness. With its desirable traits and dual-purpose functionality, this plant is an excellent choice for farmers and gardeners looking for a reliable crop that can serve multiple purposes.</td>
+
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>AIMP 
+                    92901 
+                    (Samrudhi</td>
+                <td>AICPMIP RRS 
+                    NARP</td>
+                <td>2001</td>
+                <td>Maharashtra, 
+                    Karnataka, Andhra 
+                    Pradesh, Tamil Nadu</td>
+                <td>This plant has a growth period of 80 days and is of medium height. It produces cylindrical compact earheads that slightly taper towards the tip, giving them a distinctive shape. The grains of this variety are bold and deep grey in color, adding to their visual appeal. With its medium height and compact earheads, this plant is a good choice for gardeners or farmers looking to maximize their growing space. Additionally, the bold, deep grey grains are an excellent source of nutrition and can be used for a variety of purposes, including cooking and animal feed. Overall, this plant is a reliable and hardy crop that is well-suited to a range of growing conditions.</td>
+
+            </tr>
+        <tr>
+            <td>9</td>
+            <td>HC 20 </td>
+            <td>AICPMIP CCS 
+                HAU Hisar</td>
+            <td>2002</td>
+            <td>Harayana</td>
+            <td>This plant has a growth period of 80-83 days and is tall in height. It produces compact, thick cylindrical earheads, which are visually striking and give the plant a distinctive appearance. The earheads are filled with obovate grey grains and have yellow anthers. This variety was developed from S1 progenies derived from a gene pool that was carefully selected for drought tolerance, making it a great option for farmers or gardeners who are growing in areas with limited water availability. The compact nature of the earheads also means that this variety is a good choice for those looking to maximize their growing space. With its combination of drought tolerance, striking appearance, and reliable yield, this variety is a great choice for anyone looking to grow a productive and visually appealing crop.</td>
+
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>CZP 9802</td>
+            <td>CAZRI Jodhpur</td>
+            <td>2003</td>
+            <td>
+                Rajasthan, Gujarat 
+                and Haryana (Zone 
+                A1)</td>
+            <td>The 70-72 day timeframe suggests that it is an early maturing variety of maize. The medium height and good tillering indicate that the plant has a moderate level of vigor and is capable of producing a reasonable amount of foliage and earheads. The thin stem and narrow leaves suggest that the plant is not overly robust and may be more susceptible to lodging under adverse weather conditions.</td>
+
+        </tr>
+            <tr>
+                <td>11</td>
+                <td>CoCu 9</td>
+                <td>AICPMIP TNAU 
+                    Coimbatore</td>
+                <td>2005</td>
+                <td>Tamilnadu </td>
+                <td>The 80-85 day timeframe indicates that the variety of millet being referred to is a mid- to late-season variety, and the tall, semi-compact to compact plant type suggests that it has a moderate to high level of vigor.</td>
+
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>JBV 4 
+                    (MP 403)</td>
+                <td>AICPMIP COA 
+                    Gwalior</td>
+                <td>2007</td>
+                <td>MP</td>
+                <td>The 75 day maturity timeframe indicates that the variety is an early maturing type of bush bean. The medium height and thick stems suggest that the plant has a moderate level of vigor and is capable of supporting the weight of the bean pods as they develop . </td>
+
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Pusa Composite 
+                    443 (MP 443) </td>
+                <td>AICPMIP IARI, New Delh </td>
+                <td>2009</td>
+                <td>Rajasthan , Harayana, Gujarat</td>
+                <td>The crop being described is likely to be a variety of sorghum (Sorghum bicolor), a warm-season cereal grain that is grown for food, feed, and forage.
+
+                    The description of early maturity and medium height suggest that the variety is a short-season type of sorghum, which is often planted in regions with limited growing seasons. The rod-shaped earheads are a common characteristic of some varieties of sorghum, and the bold grain suggests that the seeds are plump and have a high yield potential</td>
+            </tr>
+        <tr>
+            <td>1</td>
+            <td>Pusa 
+                Composite 
+                612 (MP 
+                480)</td>
+            <td>AICPMIP IARI, 
+                New Delhi</td>
+                <td>2011</td>
+            <td>Maharashtra, 
+                Karnataka, Andhra 
+                Pradesh, Tamil Nadu</td>
+            
+            <td>The crop being described is likely to be a variety of maize (also known as corn), a warm-season cereal grain that is grown in many parts of the world.
+
+                The description of medium maturity and medium to tall plant height suggest that the variety is a mid-season type of maize, with a moderate level of vigor. The compact cylindrical earheads are also typical of many maize varieties, and are known for their high yield potential.</td>
+
+        </tr>
+        
+        
+    </table>
+    <strong>Vareities of pearl millet </strong>
+    <p>
+        <p> <div class="responsive">
+          <div class="gallery">
+            <a target="_blank" href="img style="display: block;-webkit-user-select- : none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms; ></a> 
+              <img src="img style="display: block;-webkit-user-select- : none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms; src="http://agropedia.iitk.ac.in/sites/default/files/c23.JPG" width="326" height="212">
+            </a>
+            <div class="desc"> PHB 65</div>
+            
+          </div>
+          </div>
+        </p></div>
+        <div class="clearfix"></div>
+    
+              
+    <h2>Reference</h2> 
+    <p>
+     <ul>
+         <li> [1] <a href="https://vikaspedia.in/agriculture/crop-production/package-of-practices/cereals-and-millets/bajra-1"> State wise varieties of pearl millet  </a></li>
+         <li>[2] <a href="http://www.aicpmip.res.in/pearl%20millet%20hybrids%20and%20varieties.pdf">Pearl millet hybrid and varieties  </a></li>
+         <li>[3] <a href="https://www.icrisat.org/new-pearl-millet-varieties-and-hybrids-capture-farmers-and-seed-producers-interest-in-niger/"> NEW PEARL MILLET VARIETIES AND HYBRIDS CAPTURE FARMERS AND SEED PRODUCERS’ INTEREST IN NIGER</a></li>
+         <li>[4] <a href="https://www.frontiersin.org/articles/10.3389/fpls.2021.670201/full">Performance and Stability of Pearl Millet Varieties for Grain Yield and Micronutrients in Arid and Semi-Arid Regions of India </a></li>
+         <li> [5] <a href="http://agropedia.iitk.ac.in/content/pearl-millet-cultivars"> Hybrids of Pearl millet </a></li>
+         <li>[6] <a href="http://agropedia.iitk.ac.in/content/bajara-pearl-millet-varieties"> Pearl millet Vareities </a></li>
+        
+     </ul>
+    </p> 
+   
+</body>
+</html>
